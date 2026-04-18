@@ -102,7 +102,7 @@ export default function App() {
           background:var(--card-cream);
         }
         .hero-text-block{
-          padding:32px 60px 36px;
+          padding:32px 60px 0;
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
@@ -454,12 +454,12 @@ export default function App() {
           .nav-links{display:none;}
           .card{padding:32px 24px;}
 
-          /* Hero - no white strip, less padding */
-          .hero-text-block{padding:24px 24px 20px;}
+          /* Hero - no white strip */
+          .hero-text-block{padding:24px 24px 0px;}
           .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
-          .hero-img-block{min-height:320px;}
-          .hero-card{background:var(--card-cream);}
+          .hero-img-block{min-height:0;height:320px;}
+          .hero-card{background:var(--card-cream);gap:0;}
 
           /* Bigger mobile titles */
           .who-section-title{font-size:1.3rem;}
@@ -470,10 +470,10 @@ export default function App() {
           /* Who */
           .who-logo{width:220px;height:220px;}
 
-          /* Makers */
-          .makers-img-top{height:280px;}
-          .makers-img-top img{object-fit:contain;}
-          .makers-text-bottom{padding:28px 24px;}
+          /* Makers - no strip */
+          .makers-img-top{height:auto;min-height:0;}
+          .makers-img-top img{object-fit:cover;height:auto;}
+          .makers-text-bottom{padding:28px 24px;margin-top:0;}
 
           /* Setting 1 */
           .setting1-img{height:280px;}
