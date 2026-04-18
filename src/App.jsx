@@ -105,7 +105,7 @@ export default function App() {
           background:var(--card-cream);
         }
         .hero-text-block h1{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;
+          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:300;
           letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:22px;
@@ -174,11 +174,11 @@ export default function App() {
         ══════════════════════════════════════ */
         .makers-stack{display:flex;flex-direction:column;}
         .makers-img-top{
-          width:100%;height:420px;overflow:hidden;
+          width:100%;overflow:hidden;
           border-radius:18px 18px 0 0;
         }
-        .makers-img-top img{width:100%;height:100%;object-fit:contain;object-position:center;background:#e8f5e0;display:block;}
-        .makers-text-bottom{padding:44px 52px;background:#c8f0c8;}
+        .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;}
+        .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
           font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
           color:var(--text-dark);margin-bottom:16px;
@@ -197,6 +197,7 @@ export default function App() {
           padding:6px 0;
           padding-left:1.4em;
           position:relative;
+          text-align:left;
         }
         .makers-bullets li::before{
           content:'•';
@@ -446,7 +447,7 @@ export default function App() {
 
           /* Hero - no white strip, less padding */
           .hero-text-block{padding:24px 24px 20px;}
-          .hero-text-block h1{font-size:1.5rem;white-space:normal;}
+          .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:320px;}
           .hero-card{background:transparent;}
@@ -531,7 +532,7 @@ export default function App() {
         <section style={{padding:'0 40px 20px'}}>
           <div className="hero-card reveal">
             <div className="hero-text-block">
-              <h1>Unicorn<br/>Alliance</h1>
+              <h1>Unicorn Alliance</h1>
               <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles.</p>
             </div>
             <div className="hero-img-block">
@@ -748,7 +749,7 @@ export default function App() {
         <section style={{padding:'0 40px'}}>
           <div className="art-quote-card reveal">
             <div style={{width:'100%',borderRadius:'12px',overflow:'hidden',marginBottom:'32px'}}>
-              <img src="/unicorn-assets/quote2.jpg" alt="Quote" style={{width:'100%',height:'auto',display:'block'}} />
+              <img src="/unicorn-assets/quote2.jpg" alt="Quote" style={{width:'100%',height:'auto',display:'block',borderRadius:'12px'}} />
             </div>
             <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
           </div>
