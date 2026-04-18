@@ -131,13 +131,14 @@ export default function App() {
           gap:0;
         }
         .who-section-title{
-          font-size:0.72rem;
-          letter-spacing:0.32em;
+          font-size:clamp(2.8rem,5vw,4.5rem);
+          letter-spacing:0.18em;
           text-transform:uppercase;
-          color:var(--teal-label);
+          color:var(--text-dark);
           font-family:var(--serif);
-          font-weight:400;
+          font-weight:300;
           margin-bottom:32px;
+          line-height:1.0;
         }
         .who-logo{
           width:260px;height:260px;
@@ -146,14 +147,14 @@ export default function App() {
           margin-bottom:36px;
         }
         .who-tagline{
-          font-size:clamp(2rem,3.5vw,3rem);
+          font-size:clamp(1rem,1.8vw,1.3rem);
           font-weight:300;
-          letter-spacing:0.18em;
+          letter-spacing:0.28em;
           text-transform:uppercase;
-          color:var(--text-dark);
+          color:var(--text-mid);
           font-family:var(--serif);
           margin-bottom:28px;
-          line-height:1.2;
+          line-height:1.4;
         }
         .who-divider{width:60px;height:1px;background:var(--gold);margin:0 auto 28px;}
         .who-text p{
@@ -237,13 +238,13 @@ export default function App() {
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(140,180,100,0.25);border-radius:12px;padding:40px 44px;}
         .no-place .np-label{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal-label);display:block;margin-bottom:16px;font-family:var(--serif);}
         .no-place h3{
-          font-size:clamp(2rem,3.2vw,2.8rem);
+          font-size:clamp(2.6rem,4.2vw,3.8rem);
           font-weight:300;color:var(--text-dark);
-          margin-bottom:16px;letter-spacing:0.02em;
+          margin-bottom:20px;letter-spacing:0.02em;
           font-family:var(--serif);
-          line-height:1.2;
+          line-height:1.15;
         }
-        .no-place p{font-size:0.88rem;font-weight:300;line-height:1.9;color:var(--text-mid);font-family:var(--serif);}
+        .no-place p{font-size:0.85rem;font-weight:300;line-height:1.9;color:var(--text-mid);font-family:var(--serif);}
 
         /* ── PHOTO CARDS ── */
         .photo-card{max-width:900px;margin:0 auto 20px;border-radius:18px;overflow:hidden;box-shadow:0 4px 40px rgba(30,60,10,0.22);position:relative;min-height:380px;display:flex;align-items:center;}
@@ -288,13 +289,13 @@ export default function App() {
         /* ── 11. FOUNDER ── */
         .founder-inner{
           display:grid;
-          grid-template-columns:1fr 1fr;
+          grid-template-columns:1.2fr 1fr;
           gap:52px;
           align-items:start;
         }
         .founder-img{
           border-radius:12px;overflow:hidden;
-          min-height:640px;
+          min-height:780px;
         }
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
         .founder-text-block{padding-top:8px;}
