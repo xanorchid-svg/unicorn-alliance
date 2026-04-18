@@ -17,7 +17,7 @@ export default function App() {
         :root{
           --card-white:rgba(252,252,248,0.96);
           --card-cream:rgba(248,246,234,0.97);
-          --card-sage:rgba(225,238,210,0.97);
+          --card-sage:#c8f0c8;
           --teal:#3d6644;
           --teal-label:#4a7a5a;
           --teal-accent:#4a7a5a;
@@ -101,15 +101,16 @@ export default function App() {
           background:var(--card-cream);
         }
         .hero-text-block{
-          padding:52px 60px 40px;
+          padding:32px 60px 36px;
           background:var(--card-cream);
         }
         .hero-text-block h1{
-          font-size:clamp(1.4rem,2.2vw,2.2rem);font-weight:300;
+          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;
           letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:22px;
           font-family:var(--serif);
+          white-space:nowrap;
         }
         .hero-text-block .hero-sub{
           font-size:1.05rem;font-weight:300;
@@ -140,6 +141,7 @@ export default function App() {
           color:var(--text-dark);
           font-family:var(--serif);
           font-weight:300;
+          margin-top:12px;
           margin-bottom:32px;
           line-height:1.0;
         }
@@ -172,31 +174,36 @@ export default function App() {
         ══════════════════════════════════════ */
         .makers-stack{display:flex;flex-direction:column;}
         .makers-img-top{
-          width:100%;height:360px;overflow:hidden;
+          width:100%;height:420px;overflow:hidden;
           border-radius:18px 18px 0 0;
         }
-        .makers-img-top img{width:100%;height:100%;object-fit:cover;display:block;}
-        .makers-text-bottom{padding:44px 52px;}
+        .makers-img-top img{width:100%;height:100%;object-fit:contain;object-position:center;background:#e8f5e0;display:block;}
+        .makers-text-bottom{padding:44px 52px;background:#c8f0c8;}
         .makers-text-bottom h2{
           font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
-          color:var(--text-dark);margin-bottom:10px;
+          color:var(--text-dark);margin-bottom:16px;
           font-family:var(--serif);text-align:center;
         }
         .makers-intro{
           font-size:0.98rem;font-weight:300;color:var(--text-mid);
-          line-height:1.7;margin-bottom:28px;
+          line-height:1.7;margin-bottom:20px;
           font-family:var(--serif);text-align:left;
         }
-        .makers-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-        .maker-card{
-          background:rgba(240,248,230,0.7);
-          border:1px solid rgba(80,130,60,0.2);
-          border-radius:10px;padding:20px 18px;
-          transition:transform 0.25s,background 0.25s;
+        .makers-bullets{list-style:none;margin:0;padding:0;}
+        .makers-bullets li{
+          font-size:0.95rem;font-weight:300;
+          color:var(--text-body);line-height:1.75;
+          font-family:var(--serif);
+          padding:6px 0;
+          padding-left:1.4em;
+          position:relative;
         }
-        .maker-card:hover{transform:translateY(-3px);background:rgba(240,248,230,0.95);}
-        .maker-card h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;font-family:var(--serif);text-align:center;}
-        .maker-card p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);text-align:left;}
+        .makers-bullets li::before{
+          content:'•';
+          position:absolute;left:0;
+          color:var(--teal);
+          font-size:1rem;
+        }
 
         /* ══════════════════════════════════════
            4. SETTING 1 — image top 3/4, text bottom 1/4
@@ -273,8 +280,8 @@ export default function App() {
           box-shadow:0 4px 40px rgba(30,60,10,0.22);
           background:var(--card-white);
         }
-        .quote-img{width:100%;height:480px;overflow:hidden;}
-        .quote-img img{width:100%;height:100%;object-fit:cover;display:block;}
+        .quote-img{width:100%;overflow:hidden;}
+        .quote-img img{width:100%;height:auto;display:block;object-fit:contain;}
         .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
           font-size:clamp(1.1rem,1.8vw,1.5rem);
@@ -437,20 +444,29 @@ export default function App() {
           .nav-links{display:none;}
           .card{padding:32px 24px;}
 
-          /* Hero */
-          .hero-text-block{padding:36px 28px 28px;}
+          /* Hero - no white strip, less padding */
+          .hero-text-block{padding:24px 24px 20px;}
+          .hero-text-block h1{font-size:1.5rem;white-space:normal;}
+          .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:320px;}
+          .hero-card{background:transparent;}
+
+          /* Bigger mobile titles */
+          .who-section-title{font-size:1.3rem;}
+          .makers-text-bottom h2,.setting1-text h2,.lab-header h2,.phase-header h2,.phase2-text h2,.revenue-content h2,.founder-section-title,.art-text h2{font-size:1.3rem !important;}
+          .no-place .np-label{font-size:1.3rem;}
+          .quote-title{font-size:1.1rem;}
 
           /* Who */
           .who-logo{width:220px;height:220px;}
 
           /* Makers */
-          .makers-img-top{height:240px;}
+          .makers-img-top{height:280px;}
+          .makers-img-top img{object-fit:contain;}
           .makers-text-bottom{padding:28px 24px;}
-          .makers-grid{grid-template-columns:1fr;}
 
           /* Setting 1 */
-          .setting1-img{height:300px;}
+          .setting1-img{height:280px;}
           .setting1-text{padding:28px 24px;}
 
           /* Setting 2 */
@@ -463,8 +479,7 @@ export default function App() {
           .no-place{padding:28px 24px;}
 
           /* Quote card */
-          .quote-img{height:280px;}
-          .quote-text{padding:28px 24px;}
+          .quote-text{padding:24px 24px;}
 
           /* Phase */
           .ritual-grid{grid-template-columns:1fr;}
@@ -483,7 +498,7 @@ export default function App() {
           .founder-img{height:380px;}
 
           /* Art quote */
-          .art-quote-card{padding:40px 28px;}
+          .art-quote-card{padding:36px 24px;}
 
           /* CTA */
           .cta-img{height:520px;}
@@ -550,18 +565,13 @@ export default function App() {
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">The Makers</h2>
                 <p className="makers-intro reveal d2">Unicorn welcomes poets, painters, landscapers, builders, composers, scientists and entrepreneurs — anyone passionate about:</p>
-                <div className="makers-grid">
-                  {[
-                    {h:'Life Inside a Château',p:'Immersed in the French countryside, living and creating within a historic monument of extraordinary beauty.'},
-                    {h:'Daily Collaboration',p:'A diet of creative exchange with talented, passionate peers who push each other toward their highest potential.'},
-                    {h:'Crafting Culture',p:'Building environments and shared rituals that shift consciousness and elevate the human experience.'},
-                    {h:'Art Meets Healing',p:'Carving new pathways between creative expression and healing, celebrating modalities outside the medical model.'},
-                  ].map((c,i)=>(
-                    <div key={i} className={`maker-card reveal d${i+2}`}>
-                      <h3>{c.h}</h3><p>{c.p}</p>
-                    </div>
-                  ))}
-                </div>
+                <ul className="makers-bullets reveal d3">
+                  <li>life inside a chateau in the french countryside</li>
+                  <li>a diet of daily collaboration with talented peers</li>
+                  <li>crafting culture and environments that shift consciousness</li>
+                  <li>carving new pathways between art and healing</li>
+                  <li>celebrating healing modalities outside the medical model</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -575,7 +585,7 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>The Setting</h2>
-              <p>A 16th-century château in the heart of the Loire Valley. Unicorn Alliance lives in this historic monument, held by the same family for 9 generations, retaining many of its original components.</p>
+              <p>A 16th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
@@ -634,7 +644,7 @@ export default function App() {
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
             </div>
             <div className="quote-text">
-              <p className="quote-title">A 17th-Century Monument.</p>
+              <p className="quote-title">A 17th-Century Monument</p>
               <p className="quote-sub">Nine generations. One family.</p>
             </div>
           </div>
@@ -642,7 +652,7 @@ export default function App() {
 
         {/* ══ 8. PHASE I ══ */}
         <section id="phase1" style={{padding:'0 40px'}}>
-          <div className="card card-cream reveal">
+          <div className="card card-sage reveal">
             <div className="phase-header">
               <span className="phase-num">Phase I</span>
               <h2>Creating Culture</h2>
@@ -734,7 +744,17 @@ export default function App() {
           </div>
         </section>
 
-        {/* ══ 12. MEGHAN'S ART — no image, no quote ══ */}
+        {/* ══ 12. QUOTE SLIDE — above Meghan's Art ══ */}
+        <section style={{padding:'0 40px'}}>
+          <div className="art-quote-card reveal">
+            <div style={{width:'100%',borderRadius:'12px',overflow:'hidden',marginBottom:'32px'}}>
+              <img src="/unicorn-assets/quote2.jpg" alt="Quote" style={{width:'100%',height:'auto',display:'block'}} />
+            </div>
+            <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
+          </div>
+        </section>
+
+        {/* ══ 13. MEGHAN'S ART ══ */}
         <section id="art" style={{padding:'0 40px'}}>
           <div className="card card-white reveal">
             <div className="art-text">
@@ -743,13 +763,6 @@ export default function App() {
               <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
               <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
             </div>
-          </div>
-        </section>
-
-        {/* ══ 13. QUOTE SLIDE ══ */}
-        <section style={{padding:'0 40px'}}>
-          <div className="art-quote-card reveal">
-            <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
           </div>
         </section>
 
