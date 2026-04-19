@@ -15,16 +15,16 @@ export default function App() {
       <style>{`
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
         :root{
-          --card-white:rgba(252,252,248,0.96);
+          --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#3d6644;
-          --teal-label:#4a7a5a;
-          --teal-accent:#4a7a5a;
-          --text-dark:#1e2e1a;
-          --text-body:#3a4e34;
-          --text-mid:#5a6e54;
-          --text-light:#8a9e84;
+          --teal:#2a5c38;
+          --teal-label:#2a5c38;
+          --teal-accent:#2a5c38;
+          --text-dark:#162812;
+          --text-body:#1e3820;
+          --text-mid:#2e4e30;
+          --text-light:#4a7a54;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;}
@@ -33,21 +33,37 @@ export default function App() {
           color:var(--text-dark);
           overflow-x:hidden;
           position:relative;
-          background:#5a8c3a;
+          background:#3a6e28;
         }
 
-        /* ── BACKGROUND ── */
+        /* ── BACKGROUND — layered CSS bokeh, deep greens ── */
         .bg-bokeh{
           position:fixed;inset:0;z-index:0;
-          background-image:url('/unicorn-assets/background_greenbokeh.jpg');
-          background-size:cover;
-          background-position:center;
-          background-attachment:fixed;
+          background:
+            radial-gradient(ellipse 600px 800px at 10% 20%, rgba(60,120,30,0.92) 0%, transparent 60%),
+            radial-gradient(ellipse 500px 600px at 85% 10%, rgba(40,100,20,0.85) 0%, transparent 55%),
+            radial-gradient(ellipse 700px 500px at 5% 80%, rgba(50,110,25,0.88) 0%, transparent 60%),
+            radial-gradient(ellipse 600px 700px at 90% 75%, rgba(35,90,18,0.9) 0%, transparent 55%),
+            radial-gradient(ellipse 800px 600px at 45% 50%, rgba(70,140,35,0.6) 0%, transparent 65%),
+            radial-gradient(ellipse 300px 300px at 25% 35%, rgba(120,190,60,0.55) 0%, transparent 50%),
+            radial-gradient(ellipse 250px 350px at 70% 60%, rgba(90,160,40,0.5) 0%, transparent 50%),
+            radial-gradient(ellipse 200px 200px at 55% 15%, rgba(150,210,80,0.45) 0%, transparent 45%),
+            radial-gradient(ellipse 180px 280px at 15% 65%, rgba(130,195,65,0.4) 0%, transparent 45%),
+            linear-gradient(145deg, #4a8c28 0%, #2e6618 30%, #3a7820 60%, #527a28 100%);
+          filter:blur(2px);
+          transform:scale(1.02);
+        }
+        .bg-bokeh::before{
+          content:'';position:absolute;inset:0;
+          background:
+            radial-gradient(circle 280px at 30% 25%, rgba(180,230,100,0.3) 0%, transparent 55%),
+            radial-gradient(circle 200px at 75% 40%, rgba(100,180,45,0.35) 0%, transparent 50%),
+            radial-gradient(circle 320px at 60% 78%, rgba(80,155,35,0.3) 0%, transparent 55%),
+            radial-gradient(circle 150px at 20% 90%, rgba(160,220,70,0.25) 0%, transparent 45%);
+          filter:blur(30px);
         }
         @media(max-width:768px){
-          .bg-bokeh{
-            background-attachment:scroll;
-          }
+          .bg-bokeh{background-attachment:scroll;filter:blur(1px);}
         }
 
         .page{position:relative;z-index:1;padding:0;}
@@ -108,16 +124,16 @@ export default function App() {
           margin:0;
         }
         .hero-text-block h1{
-          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:300;
+          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:500;
           letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
-          margin-bottom:22px;
+          margin-bottom:18px;
           font-family:var(--serif);
           white-space:nowrap;
         }
         .hero-text-block .hero-sub{
-          font-size:1.05rem;font-weight:300;
-          color:var(--text-body);line-height:1.75;
+          font-size:1.05rem;font-weight:400;
+          color:var(--text-body);line-height:1.4;
           font-family:var(--serif);
         }
         .hero-img-block{
@@ -142,37 +158,27 @@ export default function App() {
         }
         .who-section-title{
           font-size:clamp(1.1rem,2vw,1.7rem);
-          letter-spacing:0.18em;
-          text-transform:uppercase;
-          color:var(--text-dark);
-          font-family:var(--serif);
-          font-weight:300;
-          margin-top:12px;
-          margin-bottom:32px;
-          line-height:1.0;
+          letter-spacing:0.18em;text-transform:uppercase;
+          color:var(--text-dark);font-family:var(--serif);
+          font-weight:500;margin-top:12px;margin-bottom:32px;line-height:1.0;
         }
         .who-logo{
-          width:320px;height:320px;
+          width:378px;height:378px;
           display:block;
           filter:grayscale(100%) contrast(1.15) brightness(0.78);
           margin-bottom:32px;
         }
         .who-tagline{
-          font-size:clamp(0.75rem,1.2vw,0.95rem);
-          font-weight:300;
-          letter-spacing:0.28em;
-          text-transform:uppercase;
-          color:var(--text-mid);
-          font-family:var(--serif);
-          margin-bottom:24px;
-          line-height:1.4;
+          font-size:clamp(0.75rem,1.2vw,0.95rem);font-weight:500;
+          letter-spacing:0.28em;text-transform:uppercase;
+          color:var(--text-mid);font-family:var(--serif);
+          margin-bottom:24px;line-height:1.4;
         }
         .who-divider{width:60px;height:1px;background:var(--teal-accent);margin:0 auto 24px;}
         .who-text p{
-          font-size:1.05rem;font-weight:300;line-height:1.9;
+          font-size:1.05rem;font-weight:400;line-height:1.9;
           color:var(--text-body);max-width:620px;
-          margin:0 auto;font-family:var(--serif);
-          text-align:left;
+          margin:0 auto;font-family:var(--serif);text-align:left;
         }
 
         /* ══════════════════════════════════════
@@ -189,24 +195,22 @@ export default function App() {
         .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;vertical-align:bottom;margin:0;padding:0;}
         .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
-          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;
           color:var(--text-dark);margin-bottom:16px;
           font-family:var(--serif);text-align:center;
         }
         .makers-intro{
-          font-size:0.98rem;font-weight:300;color:var(--text-mid);
+          font-size:0.98rem;font-weight:400;color:var(--text-mid);
           line-height:1.7;margin-bottom:20px;
           font-family:var(--serif);text-align:left;
         }
         .makers-bullets{list-style:none;margin:0;padding:0;}
         .makers-bullets li{
-          font-size:0.95rem;font-weight:300;
+          font-size:0.95rem;font-weight:400;
           color:var(--text-body);line-height:1.75;
           font-family:var(--serif);
-          padding:6px 0;
-          padding-left:1.4em;
-          position:relative;
-          text-align:left;
+          padding:6px 0;padding-left:1.4em;
+          position:relative;text-align:left;
         }
         .makers-bullets li::before{
           content:'•';
@@ -234,12 +238,12 @@ export default function App() {
           text-align:center;
         }
         .setting1-text h2{
-          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;
           color:var(--text-dark);letter-spacing:0.08em;
           margin-bottom:16px;font-family:var(--serif);
         }
         .setting1-text p{
-          font-size:1rem;font-weight:300;color:var(--text-body);
+          font-size:1rem;font-weight:400;color:var(--text-body);
           line-height:1.8;max-width:580px;margin:0 auto;
           font-family:var(--serif);text-align:left;
         }
@@ -252,56 +256,47 @@ export default function App() {
         .setting2-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .setting2-content{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;}
         .setting-features{display:flex;flex-direction:column;gap:22px;}
-        .sf h3{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:5px;font-family:var(--serif);}
-        .sf p{font-size:0.93rem;font-weight:300;line-height:1.6;color:var(--text-body);font-family:var(--serif);text-align:left;}
+        .sf h3{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:5px;font-family:var(--serif);}
+        .sf p{font-size:0.93rem;font-weight:400;line-height:1.6;color:var(--text-body);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
            6. LABORATORY
         ══════════════════════════════════════ */
         .lab-header{text-align:center;margin-bottom:40px;}
-        .lab-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
-        .lab-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;font-family:var(--serif);text-align:left;}
+        .lab-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .lab-header p{font-size:1rem;font-weight:400;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;font-family:var(--serif);text-align:left;}
         .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
         .lab-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.25);border-radius:12px;padding:28px 24px;transition:transform 0.25s,background 0.25s;}
         .lab-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.8);}
         .lab-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:8px;font-family:var(--serif);text-align:center;}
-        .lab-item p{font-size:0.9rem;font-weight:300;line-height:1.65;color:var(--text-mid);font-family:var(--serif);text-align:left;}
+        .lab-item p{font-size:0.9rem;font-weight:400;line-height:1.65;color:var(--text-mid);font-family:var(--serif);text-align:left;}
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:40px 44px;}
         .no-place .np-label{
-          font-size:clamp(1.2rem,2vw,1.8rem);
-          letter-spacing:0.04em;
-          color:var(--text-dark);
-          display:block;margin-bottom:10px;
-          font-family:var(--serif);font-weight:300;line-height:1.15;
+          font-size:clamp(1.2rem,2vw,1.8rem);letter-spacing:0.04em;
+          color:var(--text-dark);display:block;margin-bottom:10px;
+          font-family:var(--serif);font-weight:500;line-height:1.15;
         }
-        .no-place h3{
-          font-size:1rem;font-weight:300;color:var(--text-mid);
-          margin-bottom:20px;font-family:var(--serif);line-height:1.6;
-        }
-        .no-place p{font-size:0.85rem;font-weight:300;line-height:1.9;color:var(--text-mid);font-family:var(--serif);text-align:left;}
+        .no-place h3{font-size:1rem;font-weight:400;color:var(--text-mid);margin-bottom:20px;font-family:var(--serif);line-height:1.6;}
+        .no-place p{font-size:0.85rem;font-weight:400;line-height:1.9;color:var(--text-mid);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
-           7. QUOTE CARD — image top 3/4, text bottom 1/4
+           7. QUOTE CARD
         ══════════════════════════════════════ */
         .quote-card{
           border-radius:18px;max-width:900px;margin:0 auto 20px;
-          overflow:hidden;
-          display:flex;flex-direction:column;
-          box-shadow:0 4px 40px rgba(30,60,10,0.22);
-          background:var(--card-white);
+          overflow:hidden;display:flex;flex-direction:column;
+          box-shadow:0 4px 40px rgba(30,60,10,0.22);background:var(--card-white);
         }
         .quote-img{width:100%;overflow:hidden;}
         .quote-img img{width:100%;height:auto;display:block;object-fit:contain;}
         .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
-          font-size:clamp(1.1rem,1.8vw,1.5rem);
-          font-weight:300;color:var(--text-dark);
+          font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:500;color:var(--text-dark);
           font-family:var(--serif);margin-bottom:14px;
-          letter-spacing:0.04em;line-height:1.3;
-          display:block;
+          letter-spacing:0.04em;line-height:1.3;display:block;
         }
         .quote-sub{
-          font-size:0.88rem;font-weight:300;
+          font-size:0.88rem;font-weight:400;
           color:var(--text-mid);font-family:var(--serif);
           letter-spacing:0.08em;display:block;
         }
@@ -311,22 +306,16 @@ export default function App() {
         ══════════════════════════════════════ */
         .phase-header{text-align:center;margin-bottom:44px;}
         .phase-header .phase-num{
-          font-size:clamp(0.9rem,1.5vw,1.1rem);
-          font-weight:300;letter-spacing:0.18em;
-          color:var(--text-mid);font-family:var(--serif);
-          display:block;margin-bottom:6px;
+          font-size:clamp(0.9rem,1.5vw,1.1rem);font-weight:400;letter-spacing:0.18em;
+          color:var(--text-mid);font-family:var(--serif);display:block;margin-bottom:6px;
         }
-        .phase-header h2{
-          font-size:clamp(1.2rem,2vw,1.8rem);
-          font-weight:300;color:var(--text-dark);
-          margin-bottom:14px;font-family:var(--serif);
-        }
-        .phase-header p{font-size:1rem;font-weight:300;color:var(--text-mid);line-height:1.8;max-width:640px;margin:0 auto;font-family:var(--serif);text-align:left;}
+        .phase-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .phase-header p{font-size:1rem;font-weight:400;color:var(--text-mid);line-height:1.8;max-width:640px;margin:0 auto;font-family:var(--serif);text-align:left;}
         .ritual-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
         .ritual-item{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:26px 22px;transition:transform 0.25s,background 0.25s;}
         .ritual-item:hover{transform:translateY(-3px);background:rgba(255,255,255,0.78);}
         .ritual-item h3{font-size:1rem;font-weight:600;color:var(--teal);margin-bottom:7px;font-family:var(--serif);text-align:center;}
-        .ritual-item p{font-size:0.9rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);text-align:left;}
+        .ritual-item p{font-size:0.9rem;font-weight:400;line-height:1.6;color:var(--text-mid);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
            9. PHASE II
@@ -335,15 +324,11 @@ export default function App() {
         .phase2-img{overflow:hidden;min-height:480px;}
         .phase2-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .phase2-text{padding:44px 44px;display:flex;flex-direction:column;justify-content:center;}
-        .phase2-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
-        .phase2-text p{font-size:0.98rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
-        .phase2-highlight{
-          background:rgba(200,230,180,0.4);
-          border-radius:8px;
-          padding:18px 22px;margin-top:8px;
-        }
+        .phase2-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .phase2-text p{font-size:0.98rem;font-weight:400;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
+        .phase2-highlight{background:rgba(200,230,180,0.4);border-radius:8px;padding:18px 22px;margin-top:8px;}
         .phase2-highlight h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;font-family:var(--serif);text-align:center;}
-        .phase2-highlight p{font-size:0.9rem;font-weight:300;color:var(--text-mid);line-height:1.65;font-family:var(--serif);text-align:left;}
+        .phase2-highlight p{font-size:0.9rem;font-weight:400;color:var(--text-mid);line-height:1.65;font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
            10. REVENUE
@@ -352,43 +337,37 @@ export default function App() {
         .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
         .revenue-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .revenue-content{padding:52px 48px;}
-        .revenue-content h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
+        .revenue-content h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
         .rev-list{display:flex;flex-direction:column;gap:12px;}
         .rev-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.2);border-radius:10px;padding:20px 22px;transition:transform 0.25s,background 0.25s;}
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
         .rev-item h3{font-size:1rem;font-weight:600;color:var(--text-dark);margin-bottom:5px;font-family:var(--serif);text-align:center;}
-        .rev-item p{font-size:0.88rem;font-weight:300;line-height:1.6;color:var(--text-mid);font-family:var(--serif);text-align:left;}
+        .rev-item p{font-size:0.88rem;font-weight:400;line-height:1.6;color:var(--text-mid);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
-           11. FOUNDER — full width photo, text below
+           11. FOUNDER
         ══════════════════════════════════════ */
         .founder-section-title{
-          font-size:clamp(1.1rem,2vw,1.7rem);
-          font-weight:300;color:var(--text-dark);
+          font-size:clamp(1.1rem,2vw,1.7rem);font-weight:500;color:var(--text-dark);
           letter-spacing:0.1em;text-transform:uppercase;
-          font-family:var(--serif);
-          text-align:center;
-          margin-bottom:36px;
+          font-family:var(--serif);text-align:center;margin-bottom:36px;
         }
-        .founder-img{
-          border-radius:12px;overflow:hidden;
-          width:100%;height:560px;margin-bottom:28px;
-        }
+        .founder-img{border-radius:12px;overflow:hidden;width:100%;height:560px;margin-bottom:28px;}
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
-        .ft-name{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
-        .ft-sub{font-size:0.7rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-top:4px;margin-bottom:24px;font-family:var(--serif);line-height:1.6;}
+        .ft-name{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
+        .ft-sub{font-size:0.7rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-top:4px;margin-bottom:24px;font-family:var(--serif);line-height:1.6;}
         .founder-divider{display:none;}
         .founder-bullets{list-style:none;margin-top:8px;}
-        .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(80,130,60,0.15);font-size:0.98rem;font-weight:300;line-height:1.65;color:var(--text-body);font-family:var(--serif);text-align:left;}
+        .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(80,130,60,0.15);font-size:0.98rem;font-weight:400;line-height:1.65;color:var(--text-body);font-family:var(--serif);text-align:left;}
         .founder-bullets li:last-child{border-bottom:none;}
         .founder-bullets li::before{content:'✦';color:var(--teal-accent);font-size:0.6rem;flex-shrink:0;margin-top:6px;}
 
         /* ══════════════════════════════════════
            12. MEGHAN'S ART
         ══════════════════════════════════════ */
-        .art-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:300;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
-        .art-text p{font-size:0.97rem;font-weight:300;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
-        .art-press{font-size:0.85rem;font-weight:300;color:var(--text-light);font-family:var(--serif);text-align:left;}
+        .art-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:500;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .art-text p{font-size:0.97rem;font-weight:400;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
+        .art-press{font-size:0.85rem;font-weight:400;color:var(--text-light);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
            12. QUOTE SLIDE — full bleed image, text on top
@@ -574,7 +553,7 @@ export default function App() {
               <p className="who-tagline reveal d3">Makers Make Miracles</p>
               <div className="who-divider reveal d4" />
               <div className="who-text reveal d5">
-                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives, that empowers and heals — not only each other but post treatment young adults with challenges.</p>
+                <p>Unicorn Alliance is a creative collective of makers who live their dreams and make magic together. The kind of magic that changes lives, that empowers and heals.</p>
               </div>
             </div>
           </div>
@@ -588,9 +567,11 @@ export default function App() {
                 <img src="/unicorn-assets/makers.jpg" alt="The Makers" />
               </div>
               <div className="makers-text-bottom">
-                <h2 className="reveal d1">The Makers</h2>
-                <p className="makers-intro reveal d2">Unicorn welcomes poets, painters, landscapers, builders, composers, scientists and entrepreneurs — anyone passionate about:</p>
-                <ul className="makers-bullets reveal d3">
+                <h2 className="reveal d1">CALLING ALL MAKERS</h2>
+                <p className="reveal d2" style={{fontStyle:'italic',marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'left',lineHeight:'1.7'}}>Your genius flowers when it is offered in service to the whole. — Richard Rudd, founder of The Gene Keys</p>
+                <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
+                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for poets, painters, landscapers, builders, composers, scientists, entrepreneurs, joy activators and iconoclasts — anyone passionate about:</p>
+                <ul className="makers-bullets reveal d4">
                   <li>life inside a chateau in the french countryside</li>
                   <li>a diet of daily collaboration with talented peers</li>
                   <li>crafting culture and environments that shift consciousness</li>
