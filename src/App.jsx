@@ -371,7 +371,7 @@ export default function App() {
           vertical-align:bottom;margin:0;padding:0;
         }
         .art-quote-grey-bar{
-          background:#e8e8e4;
+          background:#dcdcdc;
           padding:28px 52px 32px;
           text-align:center;
           font-size:1rem;
@@ -744,8 +744,8 @@ export default function App() {
                 <p className="reveal d2">Meghan's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
-                <div className="reveal d5" style={{marginTop:'20px',background:'rgba(42,92,56,0.12)',border:'1px solid rgba(42,92,56,0.25)',borderRadius:'8px',padding:'12px 18px',display:'inline-block'}}>
-                  <p style={{fontSize:'0.8rem',fontWeight:'600',color:'var(--teal)',fontFamily:'var(--serif)',margin:0}}>All artwork and interiors in this deck by Meghan Boody</p>
+                <div className="reveal d5" style={{marginTop:'20px',background:'rgba(42,92,56,0.12)',border:'1px solid rgba(42,92,56,0.25)',borderRadius:'8px',padding:'12px 18px',display:'inline-block',whiteSpace:'nowrap'}}>
+                  <p style={{fontSize:'0.8rem',fontWeight:'600',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,whiteSpace:'nowrap'}}>All artwork and interiors in this deck by Meghan Boody</p>
                 </div>
               </div>
             </div>
