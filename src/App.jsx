@@ -391,18 +391,28 @@ export default function App() {
         .art-press{font-size:0.85rem;font-weight:300;color:var(--text-light);font-family:var(--serif);text-align:left;}
 
         /* ══════════════════════════════════════
-           13. QUOTE SLIDE
+           12. QUOTE SLIDE — full bleed image, text on top
         ══════════════════════════════════════ */
         .art-quote-card{
-          background:var(--card-sage);
+          position:relative;
           border-radius:18px;max-width:900px;margin:0 auto 20px;
-          padding:64px 80px;text-align:center;
+          overflow:hidden;
           box-shadow:0 4px 40px rgba(30,60,10,0.18);
         }
+        .art-quote-card img{
+          width:100%;height:auto;display:block;
+        }
+        .art-quote-text-overlay{
+          position:absolute;
+          top:0;left:0;right:0;bottom:0;
+          display:flex;align-items:center;justify-content:center;
+          padding:40px 60px;
+          text-align:center;
+        }
         .art-quote-text{
-          font-size:clamp(1rem,1.8vw,1.4rem);
+          font-size:clamp(1.2rem,2.5vw,2rem);
           font-style:italic;font-weight:300;
-          color:var(--teal);line-height:1.6;
+          color:#1e3a1e;line-height:1.6;
           font-family:var(--serif);
         }
 
@@ -757,10 +767,10 @@ export default function App() {
         {/* ══ 12. QUOTE SLIDE — above Meghan's Art ══ */}
         <section style={{padding:'0 40px'}}>
           <div className="art-quote-card reveal">
-            <div style={{width:'100%',borderRadius:'12px',overflow:'hidden',marginBottom:'32px'}}>
-              <img src="/unicorn-assets/quote2.jpg" alt="Quote" style={{width:'100%',height:'auto',display:'block',borderRadius:'12px'}} />
+            <img src="/unicorn-assets/quote2.jxl" alt="Quote" />
+            <div className="art-quote-text-overlay">
+              <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
             </div>
-            <p className="art-quote-text">"The beauty of the past informs innovation of the present."</p>
           </div>
         </section>
 
