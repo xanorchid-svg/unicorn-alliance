@@ -398,9 +398,13 @@ export default function App() {
           border-radius:18px;max-width:900px;margin:0 auto 20px;
           overflow:hidden;
           box-shadow:0 4px 40px rgba(30,60,10,0.18);
+          display:block;
+          font-size:0;
+          line-height:0;
         }
         .art-quote-card img{
           width:100%;height:auto;display:block;
+          vertical-align:bottom;margin:0;padding:0;
         }
         .art-quote-text-overlay{
           position:absolute;
@@ -517,9 +521,9 @@ export default function App() {
           /* Founder */
           .founder-img{height:380px;}
 
-          /* Art quote - full bleed on mobile */
-          .art-quote-card{border-radius:0;margin:0 0 20px 0;}
-          section:has(.art-quote-card){padding-left:0 !important;padding-right:0 !important;}
+          /* Art quote - truly full bleed on mobile */
+          .art-quote-card{border-radius:0 !important;margin:0 0 20px 0 !important;box-shadow:none;}
+          .art-quote-section{padding-left:0 !important;padding-right:0 !important;}
 
           /* CTA */
           .cta-img{height:520px;}
@@ -766,7 +770,7 @@ export default function App() {
         </section>
 
         {/* ══ 12. QUOTE SLIDE — above Meghan's Art ══ */}
-        <section style={{padding:'0 40px'}}>
+        <section className="art-quote-section" style={{padding:'0 40px'}}>
           <div className="art-quote-card reveal">
             <img src="/unicorn-assets/quote2.jxl" alt="Quote" />
             <div className="art-quote-text-overlay">
