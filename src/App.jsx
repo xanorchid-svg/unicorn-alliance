@@ -43,16 +43,20 @@ export default function App() {
           background-size:cover;
           background-position:center;
           background-attachment:fixed;
+          filter:brightness(1.1) saturate(0.95);
         }
         .bg-bokeh::before{content:none;}
         @media(max-width:768px){
-          .bg-bokeh{background-attachment:scroll;}
+          .bg-bokeh{
+            background-attachment:scroll;
+            filter:none;
+          }
         }
 
         .page{position:relative;z-index:1;padding:0;}
 
-        /* ── NAV — hidden ── */
-        nav{display:none;}
+        /* ── NAV — hidden on all screens ── */
+        nav{display:none !important;}
 
         /* ── CARD BASE ── */
         .card{
@@ -133,7 +137,6 @@ export default function App() {
         .who-logo{
           width:378px;height:378px;
           display:block;
-          filter:grayscale(100%) contrast(1.15) brightness(0.78);
           margin-bottom:32px;
         }
         .who-tagline{
@@ -181,7 +184,7 @@ export default function App() {
           position:relative;text-align:left;
         }
         .makers-bullets li::before{
-          content:'❦';
+          content:'✤';
           position:absolute;left:0;
           color:var(--teal);
           font-size:0.85rem;
@@ -328,7 +331,7 @@ export default function App() {
         .founder-bullets{list-style:none;margin-top:8px;}
         .founder-bullets li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(80,130,60,0.15);font-size:0.98rem;font-weight:600;line-height:1.65;color:var(--text-body);font-family:var(--serif);text-align:left;}
         .founder-bullets li:last-child{border-bottom:none;}
-        .founder-bullets li::before{content:'❦';color:var(--teal-accent);font-size:0.85rem;flex-shrink:0;margin-top:4px;}
+        .founder-bullets li::before{content:'◆';color:var(--teal-accent);font-size:0.55rem;flex-shrink:0;margin-top:6px;}
 
         /* ══════════════════════════════════════
            12. MEGHAN'S ART
@@ -434,6 +437,8 @@ export default function App() {
           /* Hero - no white strip */
           .hero-text-block{padding:24px 24px 24px;}
           .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
+          .hero-card{background:var(--card-cream);gap:0;}
+          .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:0;height:320px;}
           .hero-card{background:var(--card-cream);gap:0;}
@@ -640,7 +645,7 @@ export default function App() {
             </div>
             <div className="quote-text">
               <p className="quote-title">Living in a 17th-Century Monument</p>
-              <p className="quote-sub">Nine generations. One family.</p>
+              <p className="quote-sub">Nine generations. One family. Where history breathes.</p>
             </div>
           </div>
         </section>
