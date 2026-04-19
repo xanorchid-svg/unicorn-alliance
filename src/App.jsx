@@ -50,7 +50,7 @@ export default function App() {
           }
         }
 
-        .page{position:relative;z-index:1;padding:0 0 80px;}
+        .page{position:relative;z-index:1;padding:0;}
 
         /* ── NAV ── */
         nav{
@@ -102,7 +102,7 @@ export default function App() {
           background:var(--card-cream);
         }
         .hero-text-block{
-          padding:32px 60px 0;
+          padding:32px 60px 28px;
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
@@ -805,6 +805,23 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* ══ FOOTER ══ */}
+        <footer style={{
+          background:'#c8f0c8',
+          textAlign:'center',
+          padding:'32px 40px',
+          marginTop:'0',
+        }}>
+          <p style={{
+            fontFamily:'var(--serif)',
+            fontSize:'0.72rem',
+            letterSpacing:'0.22em',
+            textTransform:'uppercase',
+            color:'var(--teal)',
+            fontWeight:400,
+          }}>Unicorn Alliance © 2026</p>
+        </footer>
 
       </div>
     </>
