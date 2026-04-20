@@ -21,10 +21,10 @@ export default function App() {
           --teal:#156030;
           --teal-label:#156030;
           --teal-accent:#156030;
-          --text-dark:#0d5c2a;
-          --text-body:#0d5c2a;
-          --text-mid:#0d5c2a;
-          --text-light:#0d5c2a;
+          --text-dark:#0a7a30;
+          --text-body:#0a7a30;
+          --text-mid:#0a7a30;
+          --text-light:#0a7a30;
           --serif:'Cormorant Garamond',Georgia,serif;
 
           /* ── TYPOGRAPHY SCALE ── */
@@ -163,7 +163,7 @@ export default function App() {
           line-height:1.0;
         }
         .who-logo{
-          width:454px;height:454px;
+          width:499px;height:499px;
           display:block;
           margin-bottom:32px;
         }
@@ -748,7 +748,7 @@ export default function App() {
           .hero-text-block .hero-sub{font-size:0.88rem;}
           .hero-img-block{min-height:0;height:320px;}
 
-          .who-logo{width:220px;height:220px;}
+          .who-logo{width:264px;height:264px;}
 
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
