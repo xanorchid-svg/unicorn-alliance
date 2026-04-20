@@ -130,6 +130,8 @@ export default function App() {
           color:var(--text-body);
           line-height:1.5;
           font-family:var(--serif);
+          text-align:center;
+          display:inline-block;
           text-align:left;
         }
         .hero-img-block{
@@ -880,7 +882,7 @@ export default function App() {
             <div className="setting1-text">
               <h2>THE SETTING</h2>
               <p className="setting-byline-desktop">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
-              <p className="setting-byline-mobile">A 17th-century château in the heart of the Loire Valley —<br/>held by the same family for 9 generations.</p>
+              <p className="setting-byline-mobile">A 17th-century château in the heart of the Loire Valley<br/>— held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
@@ -940,8 +942,8 @@ export default function App() {
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
             </div>
             <div className="quote-text">
-              <p className="quote-title" style={{whiteSpace:'nowrap'}}>LET THE BEAUTY OF A 17TH-CENTURY MONUMENT INFORM YOUR LIFE.</p>
-              <p className="quote-title quote-title-mobile" style={{display:'none'}}>LET THE BEAUTY OF A 17TH-CENTURY MONUMENT<br/>INFORM YOUR LIFE.</p>
+              <p className="quote-title" style={{whiteSpace:'normal',fontSize:'clamp(1rem,1.8vw,1.4rem)',letterSpacing:'0.06em'}}>LET THE BEAUTY OF A 17TH-CENTURY<br/>MONUMENT INFORM YOUR LIFE.</p>
+              <p className="quote-title quote-title-mobile" style={{display:'none',fontSize:'clamp(0.85rem,3.5vw,1rem)',letterSpacing:'0.04em'}}>LET THE BEAUTY OF A 17TH-<br/>CENTURY MONUMENT<br/>INFORM YOUR LIFE.</p>
             </div>
           </div>
         </section>
