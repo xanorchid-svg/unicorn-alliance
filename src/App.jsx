@@ -28,9 +28,9 @@ export default function App() {
           --serif:'Cormorant Garamond',Georgia,serif;
 
           /* ── TYPOGRAPHY SCALE ── */
-          --fs-hero:    clamp(3.2rem, 8vw, 7rem);      /* Hero H1 — page title */
-          --fs-section: clamp(2rem, 4vw, 3.2rem);       /* Section H2 — slide titles */
-          --fs-card:    clamp(1rem, 1.5vw, 1.2rem);     /* Card H3 — grid/feature labels */
+          --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);      /* Hero H1 — page title */
+          --fs-section: clamp(1rem, 2vw, 1.6rem);       /* Section H2 — slide titles */
+          --fs-card:    clamp(0.85rem, 1vw, 0.95rem);     /* Card H3 — grid/feature labels */
           --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem); /* Body paragraphs */
           --fs-small:   0.88rem;                         /* Small / supporting text */
           --fs-label:   0.68rem;                         /* Eyebrow labels */
@@ -113,7 +113,7 @@ export default function App() {
           text-align:center;
         }
         .hero-text-block h1{
-          font-size:clamp(4rem, 10vw, 9rem);
+          font-size:clamp(2rem, 5vw, 4.5rem);
           font-weight:700;
           letter-spacing:0.08em;
           line-height:1.0;
@@ -730,9 +730,9 @@ export default function App() {
         ══════════════════════════════════════ */
         @media(max-width:768px){
           :root{
-            --fs-hero:    clamp(2rem, 10vw, 3rem);
-            --fs-section: clamp(1.5rem, 6vw, 2rem);
-            --fs-card:    1rem;
+            --fs-hero:    clamp(1.4rem, 7vw, 2rem);
+            --fs-section: clamp(0.9rem, 4vw, 1.2rem);
+            --fs-card:    0.85rem;
             --fs-body:    0.95rem;
             --fs-small:   0.85rem;
           }
@@ -742,7 +742,7 @@ export default function App() {
           .card{padding:32px 24px;}
 
           .hero-text-block{padding:24px 24px 24px;}
-          .hero-text-block h1{font-size:clamp(2rem, 10vw, 3.5rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
+          .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.88rem;}
