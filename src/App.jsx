@@ -18,13 +18,13 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#1a5c2a;
-          --teal-label:#1a5c2a;
-          --teal-accent:#1a5c2a;
-          --text-dark:#0e2410;
-          --text-body:#143016;
-          --text-mid:#1e4020;
-          --text-light:#2e6030;
+          --teal:#156030;
+          --teal-label:#156030;
+          --teal-accent:#156030;
+          --text-dark:#0a1e0c;
+          --text-body:#0e2810;
+          --text-mid:#163818;
+          --text-light:#1e5020;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
         html{scroll-behavior:smooth;}
@@ -97,6 +97,7 @@ export default function App() {
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
+          text-align:right;
         }
         .hero-text-block h1{
           font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:700;
@@ -135,7 +136,7 @@ export default function App() {
           font-weight:700;margin-top:12px;margin-bottom:32px;line-height:1.0;
         }
         .who-logo{
-          width:378px;height:378px;
+          width:454px;height:454px;
           display:block;
           margin-bottom:32px;
         }
@@ -372,17 +373,18 @@ export default function App() {
         }
         .art-quote-grey-bar{
           background:#dcdcdc;
-          padding:28px 52px 32px;
+          padding:18px 52px 20px;
           text-align:center;
           font-size:1rem;
           line-height:1;
         }
         .art-quote-text{
-          font-size:clamp(1.1rem,2vw,1.6rem);
+          font-size:clamp(1rem,1.8vw,1.4rem);
           font-style:italic;font-weight:600;
-          color:#2a2a22;line-height:1.5;
+          color:#2a2a22;line-height:1.4;
           font-family:var(--serif);
           display:block;
+          white-space:nowrap;
         }
         .art-quote-text-overlay{display:none;}
 
@@ -530,7 +532,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up — expect miracles. The kind of magic that changes lives and empowers, healing ourselves and the planet.</p>
+              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water.<br/>When they show up — expect miracles.</p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -562,15 +564,16 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'0.95rem',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
-                <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
-                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for poets, painters, landscapers, builders, composers, scientists, entrepreneurs, joy activators and iconoclasts — anyone passionate about:</p>
+                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'0.95rem',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, founder of The Gene Keys</p>
+                <p className="makers-intro reveal d3">The planet needs the full power of <strong>YOUR</strong> creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
+                <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>POETS, PAINTERS, HEALERS, CHEFS, LANDSCAPERS, BUILDERS, COMPOSERS, SCIENTISTS, ENTREPRENEURS, SYSTEMS RETHINKERS, PHILANTHROPISTS, ANIMAL WHISPERERS, NATURE WORSHIPERS, LIGHT LANGUAGE LOVERS, BENEVOLENT GURUS, JOY ACTIVATORS, FUN FANATICS, ICONOCLASTS AND INTERNATIONAL MEN AND WOMEN OF MYSTERY</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
                   <li>life inside a chateau in the french countryside</li>
                   <li>a diet of daily collaboration with talented peers</li>
                   <li>crafting culture and environments that shift consciousness</li>
                   <li>carving new pathways between art and healing</li>
                   <li>celebrating healing modalities outside the medical model</li>
+                  <li>Cuddling with horses, goats, chickens and a herd of dogs every single day</li>
                 </ul>
               </div>
             </div>
@@ -601,8 +604,9 @@ export default function App() {
                 <div className="setting-features">
                   {[
                     {h:'Marquetry & Fireplaces',p:'Original craftsmanship preserved across nine generations of family stewardship.'},
-                    {h:'Orangerie',p:'A grand orangerie — perfect for a restaurant, exhibition space, or performance.'},
+                    {h:'Orangerie',p:'A grand orangerie — an invitation for a restaurant, exhibition space, or performance hall.'},
                     {h:'Hidden Stairways',p:"Secret passages and architectural mysteries woven into the château's bones."},
+                    {h:'Original 19th Century Darkroom',p:'Explore an untouched archive of glass slides and daguerreotypes.'},
                     {h:'Stables, Atelier & Glacier',p:'A medieval icehouse and historic outbuildings ripe for transformation into studios, sanctuaries, and living spaces.'},
                     {h:'Pigeonnier & 17th-Century Stove',p:'A giant pigeonnier and a remarkable 17th-century stove.'},
                   ].map((f,i)=>(
@@ -645,7 +649,7 @@ export default function App() {
             </div>
             <div className="quote-text">
               <p className="quote-title">Living in a 17th-Century Monument</p>
-              <p className="quote-sub">Nine generations. One family. Where history breathes.</p>
+              <p className="quote-sub">Let the beauty of a 17th Century monument inform your life.</p>
             </div>
           </div>
         </section>
@@ -662,7 +666,7 @@ export default function App() {
                 {h:'Sunrise & sunset meditations',p:'Bookending each day with stillness and intention, anchoring the community in rhythm and light.',d:'d2'},
                 {h:'Communal silence',p:'Shared silence announced by a tolling bell four times a day.',d:'d3'},
                 {h:'Grounding in the garden',p:'Sing and tone while caring for plants — embodied presence through earth and voice.',d:'d2'},
-                {h:'Morning swims in the moat',p:"A daily ritual of immersion, awakening the body and spirit in the château's ancient waters.",d:'d3'},
+                {h:'Morning swims in the moat',p:"Daily swims in the spring-fed moat.",d:'d3'},
                 {h:'Rewilding through animal care',p:'Tending to animals as a practice of presence, empathy, and reconnection with the natural world.',d:'d2'},
                 {h:'Shared farm-to-table meals',p:"Farm to table and organic, prepared by Unicorn's private chef — nourishment as ceremony and community.",d:'d3'},
               ].map((r,i)=>(
@@ -682,8 +686,7 @@ export default function App() {
                 <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" />
               </div>
               <div className="revenue-content">
-                <span className="label">Sustainable Opportunities</span>
-                <h2>Revenue Streams</h2>
+                <h2>Sustainable Opportunities</h2>
                 <div className="rev-list">
                   {[
                     {h:'Product sales',p:'Artisan goods, publications, and creative works produced by the maker community.'},
@@ -740,12 +743,13 @@ export default function App() {
                 <img src="/unicorn-assets/meghansart.jpg" alt="Meghan Boody artwork" />
               </div>
               <div className="art-text-col">
-                <h2 className="reveal d1">Meghan's Art</h2>
-                <p className="reveal d2">Meghan's fantastical photographs and interactive sculpture tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that questions our relationship with the beyond.</p>
+                <h2 className="reveal d1">Meghan Boody's Art</h2>
+                <p className="reveal d2">Meghan's fantastical photographs, interactive sculpture and pop-up performances tell stories about the hero's journey, unfolding in her unique brew of fairy tale, myth, and personal memory. Her interest in quantum physics, Jungian psychology, and energy-based healing modalities inform her trippy artwork that explores our relationship with the beyond.</p>
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
-                <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
-                <div className="reveal d5" style={{marginTop:'20px',background:'rgba(42,92,56,0.12)',border:'1px solid rgba(42,92,56,0.25)',borderRadius:'8px',padding:'12px 18px',display:'inline-block',whiteSpace:'nowrap'}}>
-                  <p style={{fontSize:'0.8rem',fontWeight:'600',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,whiteSpace:'nowrap'}}>All artwork and interiors in this deck by Meghan Boody</p>
+                <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
+                <p className="reveal d5" style={{fontSize:'0.97rem',fontWeight:'600',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
+                <div className="reveal d6" style={{marginTop:'16px',background:'#c8f0c8',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'inline-block'}}>
+                  <p style={{fontSize:'0.95rem',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
                 </div>
               </div>
             </div>
