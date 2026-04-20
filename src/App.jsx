@@ -18,33 +18,22 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#046e22;
-          --teal-label:#046e22;
-          --teal-accent:#046e22;
-          --text-dark:#045c1c;
-          --text-body:#056820;
-          --text-mid:#057022;
-          --text-light:#067824;
+          --teal:#156030;
+          --teal-label:#156030;
+          --teal-accent:#156030;
+          --text-dark:#0a1e0c;
+          --text-body:#0e2810;
+          --text-mid:#163818;
+          --text-light:#1e5020;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
-        html{scroll-behavior:smooth;font-size:115%;}
+        html{scroll-behavior:smooth;}
         body{
           font-family:var(--serif);
           color:var(--text-dark);
           overflow-x:hidden;
           position:relative;
           background:#3a6e28;
-        }
-        p,li,span,h1,h2,h3,h4,blockquote{color:inherit;}
-
-        /* 15% larger titles globally */
-        h1{font-size:calc(1em * 1.15) !important;}
-        h2{font-size:calc(1em * 1.15) !important;}
-        h3{font-size:calc(1em * 1.15) !important;}
-
-        @media(max-width:768px){
-          html{font-size:100%;}
-          h1,h2,h3{font-size:inherit !important;}
         }
 
         /* ── BACKGROUND ── */
@@ -108,11 +97,11 @@ export default function App() {
           background:var(--card-cream);
           flex-shrink:0;
           margin:0;
-          text-align:center;
+          text-align:right;
         }
         .hero-text-block h1{
-          font-size:clamp(4.5rem,12vw,11rem);font-weight:700;
-          letter-spacing:0.06em;line-height:0.95;
+          font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:700;
+          letter-spacing:0.12em;line-height:1.1;
           color:var(--text-dark);text-transform:uppercase;
           margin-bottom:18px;font-family:var(--serif);white-space:nowrap;
         }
@@ -141,7 +130,7 @@ export default function App() {
           align-items:center;text-align:center;gap:0;
         }
         .who-section-title{
-          font-size:clamp(1.8rem,3vw,2.8rem);
+          font-size:clamp(1.1rem,2vw,1.7rem);
           letter-spacing:0.18em;text-transform:uppercase;
           color:var(--text-dark);font-family:var(--serif);
           font-weight:700;margin-top:12px;margin-bottom:32px;line-height:1.0;
@@ -178,7 +167,7 @@ export default function App() {
         .makers-img-top img{width:100%;height:auto;display:block;object-fit:cover;vertical-align:bottom;margin:0;padding:0;}
         .makers-text-bottom{padding:44px 52px;background:var(--card-white);}
         .makers-text-bottom h2{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;
           color:var(--text-dark);margin-bottom:16px;
           font-family:var(--serif);text-align:center;
         }
@@ -221,16 +210,14 @@ export default function App() {
           text-align:center;
         }
         .setting1-text h2{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;
+          font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;
           color:var(--text-dark);letter-spacing:0.08em;
           margin-bottom:16px;font-family:var(--serif);
-          text-align:center;
         }
         .setting1-text p{
           font-size:1rem;font-weight:600;color:var(--text-body);
-          line-height:1.8;max-width:none;margin:0 auto;
-          font-family:var(--serif);text-align:center;
-          white-space:nowrap;
+          line-height:1.8;max-width:580px;margin:0 auto;
+          font-family:var(--serif);text-align:left;
         }
 
         /* ══════════════════════════════════════
@@ -248,7 +235,7 @@ export default function App() {
            6. LABORATORY
         ══════════════════════════════════════ */
         .lab-header{text-align:center;margin-bottom:40px;}
-        .lab-header h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .lab-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
         .lab-header p{font-size:1rem;font-weight:600;color:var(--text-mid);line-height:1.8;max-width:680px;margin:0 auto;font-family:var(--serif);text-align:left;}
         .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
         .lab-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.25);border-radius:12px;padding:28px 24px;transition:transform 0.25s,background 0.25s;}
@@ -257,7 +244,7 @@ export default function App() {
         .lab-item p{font-size:0.9rem;font-weight:600;line-height:1.65;color:var(--text-mid);font-family:var(--serif);text-align:left;}
         .no-place{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:40px 44px;}
         .no-place .np-label{
-          font-size:clamp(1.8rem,3vw,2.8rem);letter-spacing:0.04em;
+          font-size:clamp(1.2rem,2vw,1.8rem);letter-spacing:0.04em;
           color:var(--text-dark);display:block;margin-bottom:10px;
           font-family:var(--serif);font-weight:700;line-height:1.15;
         }
@@ -276,7 +263,7 @@ export default function App() {
         .quote-img img{width:100%;height:auto;display:block;object-fit:contain;}
         .quote-text{padding:36px 60px 40px;text-align:center;}
         .quote-title{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);
+          font-size:clamp(1.1rem,1.8vw,1.5rem);font-weight:700;color:var(--text-dark);
           font-family:var(--serif);margin-bottom:14px;
           letter-spacing:0.04em;line-height:1.3;display:block;
         }
@@ -294,7 +281,7 @@ export default function App() {
           font-size:clamp(0.9rem,1.5vw,1.1rem);font-weight:600;letter-spacing:0.18em;
           color:var(--text-mid);font-family:var(--serif);display:block;margin-bottom:6px;
         }
-        .phase-header h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
+        .phase-header h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:14px;font-family:var(--serif);}
         .phase-header p{font-size:1rem;font-weight:600;color:var(--text-mid);line-height:1.8;max-width:640px;margin:0 auto;font-family:var(--serif);text-align:left;}
         .ritual-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
         .ritual-item{background:rgba(255,255,255,0.5);border:1px solid rgba(80,130,60,0.2);border-radius:12px;padding:26px 22px;transition:transform 0.25s,background 0.25s;}
@@ -309,7 +296,7 @@ export default function App() {
         .phase2-img{overflow:hidden;min-height:480px;}
         .phase2-img img{width:100%;height:100%;object-fit:cover;display:block;}
         .phase2-text{padding:44px 44px;display:flex;flex-direction:column;justify-content:center;}
-        .phase2-text h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .phase2-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
         .phase2-text p{font-size:0.98rem;font-weight:600;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
         .phase2-highlight{background:rgba(200,230,180,0.4);border-radius:8px;padding:18px 22px;margin-top:8px;}
         .phase2-highlight h3{font-size:0.98rem;font-weight:600;color:var(--teal);margin-bottom:6px;font-family:var(--serif);text-align:center;}
@@ -322,7 +309,7 @@ export default function App() {
         .revenue-img-col{border-radius:18px 0 0 18px;overflow:hidden;min-height:480px;}
         .revenue-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .revenue-content{padding:52px 48px;}
-        .revenue-content h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
+        .revenue-content h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:32px;font-family:var(--serif);text-align:center;}
         .rev-list{display:flex;flex-direction:column;gap:12px;}
         .rev-item{background:rgba(255,255,255,0.55);border:1px solid rgba(80,130,60,0.2);border-radius:10px;padding:20px 22px;transition:transform 0.25s,background 0.25s;}
         .rev-item:hover{transform:translateX(4px);background:rgba(255,255,255,0.8);}
@@ -333,13 +320,13 @@ export default function App() {
            11. FOUNDER
         ══════════════════════════════════════ */
         .founder-section-title{
-          font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);
+          font-size:clamp(1.1rem,2vw,1.7rem);font-weight:700;color:var(--text-dark);
           letter-spacing:0.1em;text-transform:uppercase;
           font-family:var(--serif);text-align:center;margin-bottom:36px;
         }
         .founder-img{border-radius:12px;overflow:hidden;width:100%;height:560px;margin-bottom:28px;}
         .founder-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
-        .ft-name{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
+        .ft-name{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:10px;font-family:var(--serif);display:block;line-height:1.1;}
         .ft-sub{font-size:0.7rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-light);display:block;margin-top:4px;margin-bottom:24px;font-family:var(--serif);line-height:1.6;}
         .founder-divider{display:none;}
         .founder-bullets{list-style:none;margin-top:8px;}
@@ -350,7 +337,7 @@ export default function App() {
         /* ══════════════════════════════════════
            12. MEGHAN'S ART
         ══════════════════════════════════════ */
-        .art-text h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .art-text h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
         .art-text p{font-size:0.97rem;font-weight:600;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
         .art-press{font-size:0.85rem;font-weight:600;color:var(--text-light);font-family:var(--serif);text-align:left;}
 
@@ -359,7 +346,7 @@ export default function App() {
         .art-img-col{overflow:hidden;border-radius:18px 0 0 18px;min-height:460px;}
         .art-img-col img{width:100%;height:100%;object-fit:cover;display:block;}
         .art-text-col{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
-        .art-text-col h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
+        .art-text-col h2{font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;color:var(--text-dark);margin-bottom:18px;font-family:var(--serif);text-align:center;}
         .art-text-col p{font-size:0.97rem;font-weight:600;line-height:1.85;color:var(--text-body);margin-bottom:16px;font-family:var(--serif);text-align:left;}
 
         /* Footer — hidden on desktop */
@@ -445,94 +432,83 @@ export default function App() {
            RESPONSIVE
         ══════════════════════════════════════ */
         @media(max-width:768px){
-          nav{display:none !important;}
-          .card{padding:28px 20px;}
+          nav{padding:14px 20px;}
+          .nav-links{display:none;}
+          .card{padding:32px 24px;}
 
-          /* Page */
+          /* Hero - no white strip */
+          .hero-text-block{padding:24px 24px 24px;}
+          .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
+          .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-
-          /* Hero */
-          .hero-text-block{padding:22px 22px 20px;text-align:center;}
-          .hero-text-block h1{font-size:clamp(2.2rem,12vw,3.8rem);white-space:nowrap;}
-          .hero-text-block .hero-sub{font-size:0.85rem;line-height:1.5;}
-          .hero-img-block{min-height:0;height:280px;}
+          .hero-text-block .hero-sub{font-size:0.88rem;}
+          .hero-img-block{min-height:0;height:320px;}
           .hero-card{background:var(--card-cream);gap:0;}
 
-          /* Who We Are */
-          .who-logo{width:200px;height:200px;}
-          .who-section-title{font-size:1.6rem;}
-          .who-text p{font-size:0.95rem;}
+          /* Bigger mobile titles */
+          .who-section-title{font-size:1.3rem;}
+          .makers-text-bottom h2,.setting1-text h2,.lab-header h2,.phase-header h2,.phase2-text h2,.revenue-content h2,.founder-section-title,.art-text h2{font-size:1.3rem !important;}
+          .no-place .np-label{font-size:1.3rem;}
+          .quote-title{font-size:1.1rem;}
 
-          /* Makers */
+          /* Who */
+          .who-logo{width:220px;height:220px;}
+
+          /* Makers - no strip */
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
-          .makers-text-bottom{padding:24px 20px;margin-top:0;}
-          .makers-text-bottom h2{font-size:1.6rem;}
-          .makers-intro{font-size:0.88rem;}
-          .makers-bullets li{font-size:0.88rem;}
+          .makers-text-bottom{padding:28px 24px;margin-top:0;}
 
           /* Setting 1 */
-          .setting1-img{height:260px;}
-          .setting1-text{padding:24px 20px;}
-          .setting1-text h2{font-size:1.6rem;}
-          .setting1-text p{font-size:0.88rem;}
+          .setting1-img{height:280px;}
+          .setting1-text{padding:28px 24px;}
 
           /* Setting 2 */
           .setting2-split{grid-template-columns:1fr;}
-          .setting2-img-col{border-radius:18px 18px 0 0;min-height:220px;}
-          .setting2-content{padding:24px 20px;}
-          .sf h3{font-size:0.62rem;}
-          .sf p{font-size:0.85rem;}
+          .setting2-img-col{border-radius:18px 18px 0 0;min-height:240px;}
+          .setting2-content{padding:28px 24px;}
 
           /* Lab */
           .lab-grid{grid-template-columns:1fr;}
-          .lab-header h2{font-size:1.6rem;}
-          .lab-item{padding:20px 18px;}
-          .no-place{padding:24px 20px;}
-          .no-place .np-label{font-size:1.6rem;}
+          .no-place{padding:28px 24px;}
 
           /* Quote card */
-          .quote-text{padding:20px 20px;}
-          .quote-title{font-size:1.4rem;}
-          .quote-sub{font-size:0.8rem;}
+          .quote-text{padding:24px 24px;}
 
-          /* Phase I */
+          /* Phase */
           .ritual-grid{grid-template-columns:1fr;}
-          .phase-header h2{font-size:1.6rem;}
-          .ritual-item{padding:18px 16px;}
+
+          /* Phase II */
+          .phase2-inner{grid-template-columns:1fr;}
+          .phase2-img{min-height:260px;}
+          .phase2-text{padding:28px 24px;}
 
           /* Revenue */
           .revenue-split{grid-template-columns:1fr;}
-          .revenue-img-col{border-radius:18px 18px 0 0;min-height:220px;}
-          .revenue-content{padding:24px 20px;}
-          .revenue-content h2{font-size:1.6rem;}
+          .revenue-img-col{border-radius:18px 18px 0 0;min-height:240px;}
+          .revenue-content{padding:28px 24px;}
 
           /* Founder */
-          .founder-img{height:340px;}
-          .founder-section-title{font-size:1.6rem;}
-          .ft-name{font-size:1.4rem;}
+          .founder-img{height:380px;}
 
           /* Art split */
           .art-split{grid-template-columns:1fr;}
-          .art-img-col{border-radius:18px 18px 0 0;min-height:240px;}
-          .art-text-col{padding:24px 20px;}
-          .art-text-col h2{font-size:1.6rem;}
+          .art-img-col{border-radius:18px 18px 0 0;min-height:260px;}
+          .art-text-col{padding:28px 24px;}
 
-          /* Art quote */
+          /* Art quote - keep card appearance on mobile */
           .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
           .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
-          .art-quote-text{font-size:0.9rem;white-space:normal;}
-          .art-quote-grey-bar{padding:16px 24px;}
 
           /* CTA */
-          .cta-img{height:420px;}
-          .cta-banner{padding:18px 20px;}
-          .cta-banner h2{font-size:0.95rem;}
-          .cta-banner p{font-size:0.78rem;margin-bottom:12px;}
-          .cta-btn{padding:8px 22px;font-size:0.7rem;}
+          .cta-img{height:520px;}
+          .cta-banner{padding:20px 24px;}
+          .cta-banner h2{font-size:1rem;}
+          .cta-banner p{font-size:0.8rem;margin-bottom:14px;}
+          .cta-btn{padding:8px 24px;font-size:0.72rem;}
 
           /* Global section padding */
-          section{padding-left:14px !important;padding-right:14px !important;}
+          section{padding-left:16px !important;padding-right:16px !important;}
         }
       `}</style>
 
@@ -597,7 +573,7 @@ export default function App() {
                   <li>crafting culture and environments that shift consciousness</li>
                   <li>carving new pathways between art and healing</li>
                   <li>celebrating healing modalities outside the medical model</li>
-                  <li>cuddling with horses, goats, chickens and a herd of dogs every single day</li>
+                  <li>Cuddling with horses, goats, chickens and a herd of dogs every single day</li>
                 </ul>
               </div>
             </div>
@@ -612,7 +588,7 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>The Setting</h2>
-              <p>A 17th-century château in the Loire Valley — in the same family for 9 generations.</p>
+              <p>A 17th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
             </div>
           </div>
         </section>
