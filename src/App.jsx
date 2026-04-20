@@ -1041,7 +1041,7 @@ export default function App() {
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
                 <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'600',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
                 <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'inline-block'}}>
-                  <p style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
+                  <p style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0,textAlign:'center'}}>All artwork and interiors in this deck by Meghan Boody.<br/>See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
                 </div>
               </div>
             </div>
