@@ -270,7 +270,8 @@ export default function App() {
           max-width:580px;
           margin:0 auto;
           font-family:var(--serif);
-          text-align:left;
+          text-align:center;
+          white-space:nowrap;
         }
 
         /* ══════════════════════════════════════
@@ -765,6 +766,7 @@ export default function App() {
           .no-place{padding:28px 24px;}
 
           .quote-sub{font-size:var(--fs-body);letter-spacing:0;font-weight:600;}
+          .quote-title{text-transform:uppercase;white-space:normal;}
 
           .ritual-grid{grid-template-columns:1fr;}
 
