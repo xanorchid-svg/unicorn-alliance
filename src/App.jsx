@@ -937,7 +937,7 @@ export default function App() {
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
             </div>
             <div className="quote-text">
-              <p className="quote-title">Living in a 17th-Century Monument</p>
+              <p className="quote-title">LIVING IN A 17TH-CENTURY MONUMENT</p>
               <p className="quote-sub">Let the beauty of a 17th Century monument inform your life.</p>
             </div>
           </div>
