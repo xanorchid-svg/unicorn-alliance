@@ -18,16 +18,16 @@ export default function App() {
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
           --card-sage:#c8f0c8;
-          --teal:#156030;
-          --teal-label:#156030;
-          --teal-accent:#156030;
-          --text-dark:#0a1e0c;
-          --text-body:#0e2810;
-          --text-mid:#163818;
-          --text-light:#1e5020;
+          --teal:#0d6e30;
+          --teal-label:#0d6e30;
+          --teal-accent:#0d6e30;
+          --text-dark:#0d5020;
+          --text-body:#0f5c24;
+          --text-mid:#126828;
+          --text-light:#1a7a32;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
-        html{scroll-behavior:smooth;}
+        html{scroll-behavior:smooth;font-size:110%;}
         body{
           font-family:var(--serif);
           color:var(--text-dark);
@@ -35,6 +35,7 @@ export default function App() {
           position:relative;
           background:#3a6e28;
         }
+        p,li,span,h1,h2,h3,h4,blockquote{color:inherit;}
 
         /* ── BACKGROUND ── */
         .bg-bokeh{
@@ -573,7 +574,7 @@ export default function App() {
                   <li>crafting culture and environments that shift consciousness</li>
                   <li>carving new pathways between art and healing</li>
                   <li>celebrating healing modalities outside the medical model</li>
-                  <li>Cuddling with horses, goats, chickens and a herd of dogs every single day</li>
+                  <li>cuddling with horses, goats, chickens and a herd of dogs every single day</li>
                 </ul>
               </div>
             </div>
@@ -588,7 +589,7 @@ export default function App() {
             </div>
             <div className="setting1-text">
               <h2>The Setting</h2>
-              <p>A 17th-century château in the heart of the Loire Valley — held by the same family for 9 generations.</p>
+              <p>A 17th-century château in the Loire Valley — in the same family for 9 generations.</p>
             </div>
           </div>
         </section>
