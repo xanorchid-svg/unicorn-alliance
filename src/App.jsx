@@ -27,7 +27,7 @@ export default function App() {
           --text-light:#088028;
           --serif:'Cormorant Garamond',Georgia,serif;
         }
-        html{scroll-behavior:smooth;font-size:120%;}
+        html{scroll-behavior:smooth;font-size:115%;}
         body{
           font-family:var(--serif);
           color:var(--text-dark);
@@ -217,11 +217,12 @@ export default function App() {
           font-size:clamp(1.2rem,2vw,1.8rem);font-weight:700;
           color:var(--text-dark);letter-spacing:0.08em;
           margin-bottom:16px;font-family:var(--serif);
+          text-align:center;
         }
         .setting1-text p{
           font-size:1rem;font-weight:600;color:var(--text-body);
           line-height:1.8;max-width:580px;margin:0 auto;
-          font-family:var(--serif);text-align:left;
+          font-family:var(--serif);text-align:center;
         }
 
         /* ══════════════════════════════════════
@@ -436,83 +437,94 @@ export default function App() {
            RESPONSIVE
         ══════════════════════════════════════ */
         @media(max-width:768px){
-          nav{padding:14px 20px;}
-          .nav-links{display:none;}
-          .card{padding:32px 24px;}
+          nav{display:none !important;}
+          .card{padding:28px 20px;}
 
-          /* Hero - no white strip */
-          .hero-text-block{padding:24px 24px 24px;}
-          .hero-text-block h1{font-size:clamp(1rem,5vw,1.6rem);white-space:nowrap;}
-          .hero-card{background:var(--card-cream);gap:0;}
+          /* Page */
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.88rem;}
-          .hero-img-block{min-height:0;height:320px;}
+
+          /* Hero */
+          .hero-text-block{padding:22px 22px 20px;text-align:right;}
+          .hero-text-block h1{font-size:clamp(1rem,5vw,1.5rem);white-space:nowrap;}
+          .hero-text-block .hero-sub{font-size:0.85rem;line-height:1.5;}
+          .hero-img-block{min-height:0;height:280px;}
           .hero-card{background:var(--card-cream);gap:0;}
 
-          /* Bigger mobile titles */
-          .who-section-title{font-size:1.3rem;}
-          .makers-text-bottom h2,.setting1-text h2,.lab-header h2,.phase-header h2,.phase2-text h2,.revenue-content h2,.founder-section-title,.art-text h2{font-size:1.3rem !important;}
-          .no-place .np-label{font-size:1.3rem;}
-          .quote-title{font-size:1.1rem;}
+          /* Who We Are */
+          .who-logo{width:200px;height:200px;}
+          .who-section-title{font-size:1.1rem;}
+          .who-text p{font-size:0.95rem;}
 
-          /* Who */
-          .who-logo{width:220px;height:220px;}
-
-          /* Makers - no strip */
+          /* Makers */
           .makers-img-top{height:auto;min-height:0;}
           .makers-img-top img{object-fit:cover;height:auto;}
-          .makers-text-bottom{padding:28px 24px;margin-top:0;}
+          .makers-text-bottom{padding:24px 20px;margin-top:0;}
+          .makers-text-bottom h2{font-size:1.1rem;}
+          .makers-intro{font-size:0.88rem;}
+          .makers-bullets li{font-size:0.88rem;}
 
           /* Setting 1 */
-          .setting1-img{height:280px;}
-          .setting1-text{padding:28px 24px;}
+          .setting1-img{height:260px;}
+          .setting1-text{padding:24px 20px;}
+          .setting1-text h2{font-size:1.1rem;}
+          .setting1-text p{font-size:0.88rem;}
 
           /* Setting 2 */
           .setting2-split{grid-template-columns:1fr;}
-          .setting2-img-col{border-radius:18px 18px 0 0;min-height:240px;}
-          .setting2-content{padding:28px 24px;}
+          .setting2-img-col{border-radius:18px 18px 0 0;min-height:220px;}
+          .setting2-content{padding:24px 20px;}
+          .sf h3{font-size:0.62rem;}
+          .sf p{font-size:0.85rem;}
 
           /* Lab */
           .lab-grid{grid-template-columns:1fr;}
-          .no-place{padding:28px 24px;}
+          .lab-header h2{font-size:1.1rem;}
+          .lab-item{padding:20px 18px;}
+          .no-place{padding:24px 20px;}
+          .no-place .np-label{font-size:1.1rem;}
 
           /* Quote card */
-          .quote-text{padding:24px 24px;}
+          .quote-text{padding:20px 20px;}
+          .quote-title{font-size:1rem;}
+          .quote-sub{font-size:0.8rem;}
 
-          /* Phase */
+          /* Phase I */
           .ritual-grid{grid-template-columns:1fr;}
-
-          /* Phase II */
-          .phase2-inner{grid-template-columns:1fr;}
-          .phase2-img{min-height:260px;}
-          .phase2-text{padding:28px 24px;}
+          .phase-header h2{font-size:1.1rem;}
+          .ritual-item{padding:18px 16px;}
 
           /* Revenue */
           .revenue-split{grid-template-columns:1fr;}
-          .revenue-img-col{border-radius:18px 18px 0 0;min-height:240px;}
-          .revenue-content{padding:28px 24px;}
+          .revenue-img-col{border-radius:18px 18px 0 0;min-height:220px;}
+          .revenue-content{padding:24px 20px;}
+          .revenue-content h2{font-size:1.1rem;}
 
           /* Founder */
-          .founder-img{height:380px;}
+          .founder-img{height:340px;}
+          .founder-section-title{font-size:1.1rem;}
+          .ft-name{font-size:1.2rem;}
 
           /* Art split */
           .art-split{grid-template-columns:1fr;}
-          .art-img-col{border-radius:18px 18px 0 0;min-height:260px;}
-          .art-text-col{padding:28px 24px;}
+          .art-img-col{border-radius:18px 18px 0 0;min-height:240px;}
+          .art-text-col{padding:24px 20px;}
+          .art-text-col h2{font-size:1.1rem;}
 
-          /* Art quote - keep card appearance on mobile */
+          /* Art quote */
           .art-quote-card{border-radius:18px !important;margin:0 auto 20px !important;box-shadow:0 4px 40px rgba(30,60,10,0.18) !important;}
           .art-quote-section{padding-left:16px !important;padding-right:16px !important;}
+          .art-quote-text{font-size:0.9rem;white-space:normal;}
+          .art-quote-grey-bar{padding:16px 24px;}
 
           /* CTA */
-          .cta-img{height:520px;}
-          .cta-banner{padding:20px 24px;}
-          .cta-banner h2{font-size:1rem;}
-          .cta-banner p{font-size:0.8rem;margin-bottom:14px;}
-          .cta-btn{padding:8px 24px;font-size:0.72rem;}
+          .cta-img{height:420px;}
+          .cta-banner{padding:18px 20px;}
+          .cta-banner h2{font-size:0.95rem;}
+          .cta-banner p{font-size:0.78rem;margin-bottom:12px;}
+          .cta-btn{padding:8px 22px;font-size:0.7rem;}
 
           /* Global section padding */
-          section{padding-left:16px !important;padding-right:16px !important;}
+          section{padding-left:14px !important;padding-right:14px !important;}
         }
       `}</style>
 
