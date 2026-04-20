@@ -113,7 +113,7 @@ export default function App() {
           text-align:center;
         }
         .hero-text-block h1{
-          font-size:clamp(2rem, 5vw, 4.5rem);
+          font-size:clamp(2rem, 4vw, 2.8rem);
           font-weight:700;
           letter-spacing:0.08em;
           line-height:1.0;
