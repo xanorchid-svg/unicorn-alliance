@@ -17,7 +17,7 @@ export default function App() {
         :root{
           --card-white:rgba(252,252,248,0.97);
           --card-cream:rgba(248,246,234,0.97);
-          --card-sage:#c8f0c8;
+          --card-sage:rgba(185,218,185,0.72);
           --teal:#156030;
           --teal-label:#156030;
           --teal-accent:#156030;
@@ -29,11 +29,11 @@ export default function App() {
 
           /* ── TYPOGRAPHY SCALE ── */
           --fs-hero:    clamp(1.6rem, 4vw, 3.5rem);      /* Hero H1 — page title */
-          --fs-section: clamp(1rem, 2vw, 1.6rem);       /* Section H2 — slide titles */
-          --fs-card:    clamp(0.85rem, 1vw, 0.95rem);     /* Card H3 — grid/feature labels */
-          --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem); /* Body paragraphs */
-          --fs-small:   0.88rem;                         /* Small / supporting text */
-          --fs-label:   0.68rem;                         /* Eyebrow labels */
+          --fs-section: clamp(1.15rem, 2.3vw, 1.84rem);  /* Section H2 — +15% */
+          --fs-card:    clamp(0.98rem, 1.15vw, 1.09rem); /* Card H3 — +15% */
+          --fs-body:    clamp(0.95rem, 1.2vw, 1.05rem);  /* Body paragraphs */
+          --fs-small:   0.88rem;                          /* Small / supporting text */
+          --fs-label:   0.68rem;                          /* Eyebrow labels */
         }
         html{scroll-behavior:smooth;}
         body{
@@ -1030,7 +1030,7 @@ export default function App() {
                 <p className="reveal d3">Her work will be displayed throughout the château, providing psychological tools, touchpoints, and portals for the community. Artwork by Unicorn's team of makers will follow.</p>
                 <p className="art-press reveal d4">Meghan has been celebrated for her magical homes in Dutch Vogue, New York Magazine, Telegraph Magazine, H&amp;G, Cottages and Gardens, Messy Nessy Chic, and Timeout.</p>
                 <p className="reveal d5" style={{fontSize:'var(--fs-body)',fontWeight:'600',lineHeight:'1.85',color:'var(--text-body)',marginBottom:'16px',fontFamily:'var(--serif)',textAlign:'left'}}>She is currently writing a fantasy/memoir hybrid about a months long radical shift in consciousness she experienced three years ago.</p>
-                <div className="reveal d6" style={{marginTop:'16px',background:'#c8f0c8',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'inline-block'}}>
+                <div className="reveal d6" style={{marginTop:'16px',background:'rgba(185,218,185,0.72)',border:'1px solid rgba(42,92,56,0.3)',borderRadius:'8px',padding:'14px 20px',display:'inline-block'}}>
                   <p style={{fontSize:'var(--fs-body)',fontWeight:'700',color:'var(--teal)',fontFamily:'var(--serif)',margin:0}}>All artwork and interiors in this deck by Meghan Boody. See more of her work <a href="https://lookinglasslabs.com" target="_blank" rel="noopener noreferrer" style={{color:'var(--teal)',textDecoration:'underline',fontWeight:'700'}}>HERE</a>.</p>
                 </div>
               </div>
@@ -1054,7 +1054,7 @@ export default function App() {
 
         {/* ══ FOOTER — mobile only ══ */}
         <footer className="site-footer" style={{
-          background:'#c8f0c8',
+          background:'rgba(185,218,185,0.72)',
           textAlign:'center',
           padding:'32px 40px',
         }}>
