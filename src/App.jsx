@@ -128,7 +128,7 @@ export default function App() {
         }
         .hero-text-block .hero-sub{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-body);
           line-height:1.5;
           font-family:var(--serif);
@@ -186,7 +186,7 @@ export default function App() {
         .who-divider{width:60px;height:1px;background:var(--teal-accent);margin:0 auto 24px;}
         .who-text p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           line-height:1.9;
           color:var(--text-body);
           max-width:620px;
@@ -218,7 +218,7 @@ export default function App() {
         }
         .makers-intro{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-mid);
           line-height:1.7;
           margin-bottom:20px;
@@ -228,7 +228,7 @@ export default function App() {
         .makers-bullets{list-style:none;margin:0;padding:0;}
         .makers-bullets li{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-body);
           line-height:1.75;
           font-family:var(--serif);
@@ -272,7 +272,7 @@ export default function App() {
         .setting-byline-desktop{display:block;}
         .setting1-text p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-body);
           line-height:1.8;
           max-width:680px;
@@ -301,7 +301,7 @@ export default function App() {
         }
         .sf p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           line-height:1.6;
           color:var(--text-body);
           font-family:var(--serif);
@@ -321,7 +321,7 @@ export default function App() {
         }
         .lab-header p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-mid);
           line-height:1.8;
           max-width:680px;
@@ -348,7 +348,7 @@ export default function App() {
         }
         .lab-item p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           line-height:1.65;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -372,7 +372,7 @@ export default function App() {
         }
         .no-place h3{
           font-size:var(--fs-card);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-mid);
           margin-bottom:20px;
           font-family:var(--serif);
@@ -380,7 +380,7 @@ export default function App() {
         }
         .no-place p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           line-height:1.9;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -440,7 +440,7 @@ export default function App() {
         }
         .phase-header p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-mid);
           line-height:1.8;
           max-width:640px;
@@ -467,7 +467,7 @@ export default function App() {
         }
         .ritual-item p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           line-height:1.6;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -504,7 +504,7 @@ export default function App() {
         }
         .phase2-text p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           line-height:1.85;
           color:var(--text-body);
           margin-bottom:16px;
@@ -522,7 +522,7 @@ export default function App() {
         }
         .phase2-highlight p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-mid);
           line-height:1.65;
           font-family:var(--serif);
@@ -563,7 +563,7 @@ export default function App() {
         }
         .rev-item p{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           line-height:1.6;
           color:var(--text-mid);
           font-family:var(--serif);
@@ -613,7 +613,7 @@ export default function App() {
           padding:12px 0;
           border-bottom:1px solid rgba(80,130,60,0.15);
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           line-height:1.65;
           color:var(--text-body);
           font-family:var(--serif);
@@ -682,7 +682,7 @@ export default function App() {
         }
         .art-text-col p{
           font-size:var(--fs-body);
-          font-weight:600;
+          font-weight:400;
           line-height:1.85;
           color:var(--text-body);
           margin-bottom:16px;
@@ -691,7 +691,7 @@ export default function App() {
         }
         .art-press{
           font-size:var(--fs-small);
-          font-weight:600;
+          font-weight:400;
           color:var(--text-light);
           font-family:var(--serif);
           text-align:left;
@@ -880,16 +880,16 @@ export default function App() {
               </div>
               <div className="makers-text-bottom">
                 <h2 className="reveal d1">CALLING ALL MAKERS</h2>
-                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:600,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, The Gene Keys</p>
+                <p className="reveal d2" style={{marginBottom:'20px',fontSize:'var(--fs-body)',fontWeight:400,color:'var(--text-mid)',fontFamily:'var(--serif)',textAlign:'center',lineHeight:'1.7'}}><em>Your genius flowers when it is offered in service to the whole.</em> — Richard Rudd, The Gene Keys</p>
                 <p className="makers-intro reveal d3">The planet needs the full power of our creative genius to survive. Worry, obstacles, excuses, BEGONE! It's time to really rock it and CREATE. Joy is our rocket fuel. It gets even better when we do it together.</p>
                 <p className="makers-intro reveal d3" style={{marginBottom:'16px'}}>Unicorn sounds the clarion call for <strong>poets, painters, healers, chefs, landscapers, builders, composers, scientists, entrepreneurs, systems rethinkers, philanthropists, animal whisperers, nature worshipers, light language lovers, benevolent gurus, joy activators, fun fanatics, iconoclasts and international men and women of mystery</strong> — anyone passionate about:</p>
                 <ul className="makers-bullets reveal d4">
-                  <li><strong>life inside a chateau in the french countryside</strong></li>
-                  <li><strong>a diet of daily collaboration with talented peers</strong></li>
-                  <li><strong>crafting culture and environments that shift consciousness</strong></li>
-                  <li><strong>carving new pathways between art and healing</strong></li>
-                  <li><strong>celebrating healing modalities outside the medical model</strong></li>
-                  <li><strong>cuddling with horses, goats, chickens and a herd of dogs every single day</strong></li>
+                  <li>life inside a chateau in the french countryside</li>
+                  <li>a diet of daily collaboration with talented peers</li>
+                  <li>crafting culture and environments that shift consciousness</li>
+                  <li>carving new pathways between art and healing</li>
+                  <li>celebrating healing modalities outside the medical model</li>
+                  <li>cuddling with horses, goats, chickens and a herd of dogs every single day</li>
                 </ul>
               </div>
             </div>
@@ -941,7 +941,7 @@ export default function App() {
         <section id="laboratory" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="lab-header">
-              <h2>CHÂTEAU AS LIVING LABORATORY</h2>
+              <h2 style={{textTransform:'none'}}>Phase I: Château as Living Laboratory</h2>
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments <strong>in community</strong> that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, a sanctuary.</p>
             </div>
             <div className="lab-grid">
@@ -975,7 +975,6 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
-              <span className="phase-num">Phase I: Château as Living Laboratory</span>
               <h2>CREATING CULTURE</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
