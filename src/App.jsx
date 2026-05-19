@@ -87,7 +87,11 @@ export default function App() {
         .card-cream{background:var(--card-cream);}
         .card-sage{background:var(--card-sage);}
 
-        /* ── SCROLL REVEAL ── */
+        /* ── SECTION WRAPPER — equal margins everywhere ── */
+        .section-wrap{padding:0 40px 20px;}
+        @media(max-width:768px){
+          .section-wrap{padding:0 16px 16px;}
+        }
         .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s ease,transform 0.75s ease;}
         .reveal.visible{opacity:1;transform:translateY(0);}
         .d1{transition-delay:0.08s;}.d2{transition-delay:0.16s;}
@@ -143,13 +147,14 @@ export default function App() {
           line-height:1.55;
           font-family:var(--serif);
           display:block;
-          width:620px;
-          max-width:100%;
+          width:100%;
+          max-width:780px;
           text-align:left;
         }
         .hero-sub-miracles{
           font-weight:800;
           font-style:normal;
+          display:block;
         }
         .hero-img-block{
           width:100%;
@@ -203,7 +208,7 @@ export default function App() {
           font-weight:500;
           line-height:1.9;
           color:var(--text-body);
-          max-width:620px;
+          max-width:100%;
           margin:0 auto;
           font-family:var(--serif);
           text-align:left;
@@ -795,7 +800,6 @@ export default function App() {
           .makers-img-top img{object-fit:cover;height:auto;}
           .makers-text-bottom{padding:28px 24px;margin-top:0;}
           .makers-quote-attribution{text-align:left !important;}
-
           .setting1-img{height:280px;}
           .setting1-text{padding:20px 16px;}
           .setting1-text p{white-space:normal;font-size:0.95rem;}
@@ -861,11 +865,11 @@ export default function App() {
       <div className="page" style={{paddingTop:'20px'}}>
 
         {/* ══ 1. HERO ══ */}
-        <section style={{padding:'0 40px 20px'}}>
+        <section className="section-wrap" style={{paddingBottom:'20px'}}>
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water.<br/>When they show up — <span className="hero-sub-miracles">expect miracles.</span></p>
+              <p className="hero-sub">Unicorns are rare. They are magical. Their horn purifies water. When they show up —<br/><span className="hero-sub-miracles">expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
@@ -874,7 +878,7 @@ export default function App() {
         </section>
 
         {/* ══ 2. WHO WE ARE ══ */}
-        <section id="who" style={{padding:'0 40px'}}>
+        <section id="who" className="section-wrap">
           <div className="card card-white reveal">
             <div className="who-inner">
               <p className="who-section-title reveal d1">Who We Are</p>
@@ -890,7 +894,7 @@ export default function App() {
         </section>
 
         {/* ══ 3. THE MAKERS ══ */}
-        <section id="makers" style={{padding:'0 40px'}}>
+        <section id="makers" className="section-wrap">
           <div className="card card-cream reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="makers-stack">
               <div className="makers-img-top">
@@ -921,7 +925,7 @@ export default function App() {
         </section>
 
         {/* ══ 4. SETTING 1 ══ */}
-        <section id="setting" style={{padding:'0 40px'}}>
+        <section id="setting" className="section-wrap">
           <div className="setting1-card reveal">
             <div className="setting1-img">
               <img src="/unicorn-assets/setting1.jpg" alt="The Château" />
@@ -936,7 +940,7 @@ export default function App() {
         </section>
 
         {/* ══ 5. SETTING 2 ══ */}
-        <section style={{padding:'0 40px'}}>
+        <section className="section-wrap">
           <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="setting2-split">
               <div className="setting2-img-col">
@@ -963,7 +967,7 @@ export default function App() {
         </section>
 
         {/* ══ 6. LABORATORY ══ */}
-        <section id="laboratory" style={{padding:'0 40px'}}>
+        <section id="laboratory" className="section-wrap">
           <div className="card card-sage reveal">
             <div className="lab-header">
               <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
@@ -985,8 +989,7 @@ export default function App() {
         </section>
 
         {/* ══ 7. MONUMENT ══ */}
-        {/* CHANGE: one line, smaller font so it fits without wrapping */}
-        <section style={{padding:'0 40px'}} className="reveal">
+        <section className="section-wrap reveal">
           <div className="quote-card">
             <div className="quote-img">
               <img src="/unicorn-assets/quote.jpg" alt="Château monument" />
@@ -998,7 +1001,7 @@ export default function App() {
         </section>
 
         {/* ══ 8. PHASE I ══ */}
-        <section id="phase1" style={{padding:'0 40px'}}>
+        <section id="phase1" className="section-wrap">
           <div className="card card-sage reveal">
             <div className="phase-header">
               <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-eyebrow)',fontWeight:750,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I (Cont.)</span>
@@ -1023,7 +1026,7 @@ export default function App() {
         </section>
 
         {/* ══ 9. PHASE II ══ */}
-        <section id="phase2" style={{padding:'0 40px'}}>
+        <section id="phase2" className="section-wrap">
           <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="phase2-vertical">
               <div className="phase2-img-top">
@@ -1044,8 +1047,7 @@ export default function App() {
         </section>
 
         {/* ══ 10. REVENUE STREAMS ══ */}
-        {/* CHANGE: image centered via object-position:center */}
-        <section id="revenue" style={{padding:'0 40px'}}>
+        <section id="revenue" className="section-wrap">
           <div className="card card-sage reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="revenue-split">
               <div className="revenue-img-col">
@@ -1072,7 +1074,7 @@ export default function App() {
         </section>
 
         {/* ══ 11. THE FOUNDER ══ */}
-        <section id="founder" style={{padding:'0 40px'}}>
+        <section id="founder" className="section-wrap">
           <div className="card card-cream reveal">
             <p className="founder-section-title reveal d1">The Founder</p>
             <div className="founder-img reveal d2">
@@ -1092,7 +1094,7 @@ export default function App() {
         </section>
 
         {/* ══ 12. QUOTE SLIDE ══ */}
-        <section className="art-quote-section" style={{padding:'0 40px'}}>
+        <section className="section-wrap art-quote-section">
           <div className="art-quote-card reveal">
             <img src="/unicorn-assets/quote2.jpeg" alt="Quote" />
             <div className="art-quote-grey-bar">
@@ -1102,7 +1104,7 @@ export default function App() {
         </section>
 
         {/* ══ 13. MEGHAN'S ART ══ */}
-        <section id="art" style={{padding:'0 40px'}}>
+        <section id="art" className="section-wrap">
           <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="art-split">
               <div className="art-img-col">
@@ -1124,7 +1126,7 @@ export default function App() {
         </section>
 
         {/* ══ 14. ARE YOU A UNICORN? ══ */}
-        <section id="cta" style={{padding:'0 40px 60px'}}>
+        <section id="cta" className="section-wrap" style={{paddingBottom:'60px'}}>
           <div className="cta-card reveal">
             <div className="cta-img">
               <img src="/unicorn-assets/cta.jpg" alt="Are you a unicorn?" />
