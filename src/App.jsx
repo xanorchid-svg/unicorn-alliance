@@ -279,7 +279,7 @@ export default function App() {
         .setting-byline-mobile{display:none;}
         .setting-byline-desktop{display:block;}
         .setting1-text p{
-          font-size:clamp(1.05rem, 1.5vw, 1.25rem);
+          font-size:clamp(0.82rem, 1.1vw, 1.05rem);
           font-weight:700;
           color:var(--text-body);
           line-height:1.4;
@@ -956,6 +956,7 @@ export default function App() {
         <section id="laboratory" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="lab-header">
+              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-label)',fontWeight:700,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
               <h2 style={{textTransform:'none'}}>Phase I: Château as Living Laboratory</h2>
               <p style={{marginTop:'12px'}}>The Unicorn château is more than a historic estate — it is a living laboratory for building environments <strong>in community</strong> that foster creativity, leadership, and healing. Every element of this landscape becomes a teacher, a tool, a sanctuary.</p>
             </div>
@@ -990,6 +991,7 @@ export default function App() {
         <section id="phase1" style={{padding:'0 40px'}}>
           <div className="card card-sage reveal">
             <div className="phase-header">
+              <span style={{fontFamily:'var(--serif)',fontSize:'var(--fs-label)',fontWeight:700,letterSpacing:'0.28em',textTransform:'uppercase',color:'var(--teal-label)',display:'block',marginBottom:'8px'}}>Phase I</span>
               <h2>CREATING CULTURE</h2>
               <p style={{marginTop:'12px'}}>Daily rituals entrain and uplift frequency throughout the day, weaving a living culture of presence, creativity and collective care.</p>
             </div>
@@ -1015,7 +1017,7 @@ export default function App() {
           <div className="card card-white reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="phase2-vertical">
               <div className="phase2-img-top">
-                <img src="/unicorn-assets/invitingthevulnerable.jpeg" alt="Inviting the Vulnerable" />
+                <img src="/unicorn-assets/invitingthevulnerable.jpg" alt="Inviting the Vulnerable" />
               </div>
               <div className="phase2-text" style={{padding:'44px 52px'}}>
                 <p className="phase2-eyebrow">Phase II</p>
@@ -1037,7 +1039,7 @@ export default function App() {
           <div className="card card-sage reveal" style={{padding:'0',overflow:'hidden'}}>
             <div className="revenue-split">
               <div className="revenue-img-col">
-                <img src="/unicorn-assets/revenue.jpeg" alt="Revenue" style={{objectPosition:'center center'}} />
+                <img src="/unicorn-assets/revenue2.png" alt="Revenue" style={{objectPosition:'center center'}} />
               </div>
               <div className="revenue-content">
                 <h2>SUSTAINABLE OPPORTUNITIES</h2>
