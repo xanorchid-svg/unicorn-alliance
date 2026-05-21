@@ -152,11 +152,10 @@ export default function App() {
           text-align:left;
         }
         .hero-sub-line1{
-          display:block;
-          white-space:nowrap;
+          display:inline;
         }
         .hero-sub-miracles{
-          display:block;
+          display:inline;
           font-weight:600;
           font-style:normal;
         }
@@ -799,8 +798,8 @@ export default function App() {
           .hero-text-block h1{font-size:clamp(1.4rem, 7vw, 2rem);white-space:normal;letter-spacing:0.06em;text-align:center;}
           .hero-card{background:var(--card-cream);gap:0;}
           .page{padding-top:12px !important;}
-          .hero-text-block .hero-sub{font-size:0.72rem;font-weight:600;white-space:normal;line-height:1.5;}
-          .hero-sub-line1{white-space:normal;display:block;}
+          .hero-text-block .hero-sub{font-size:0.757rem;font-weight:600;white-space:normal;line-height:1.5;}
+          .hero-sub-line1{display:block;white-space:normal;}
           .hero-sub-miracles{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
 
