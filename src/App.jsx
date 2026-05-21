@@ -801,7 +801,7 @@ export default function App() {
           .page{padding-top:12px !important;}
           .hero-text-block .hero-sub{font-size:0.82rem;font-weight:600;white-space:normal;line-height:1.5;}
           .hero-sub-line1{white-space:normal;display:block;}
-          .hero-sub-miracles{display:block;}
+          .hero-sub-miracles{display:block;white-space:nowrap;}
           .hero-img-block{min-height:0;height:320px;}
 
           .who-logo{width:304px;height:304px;}
@@ -880,7 +880,7 @@ export default function App() {
           <div className="hero-card reveal">
             <div className="hero-text-block">
               <h1>Unicorn Alliance</h1>
-              <p className="hero-sub"><span className="hero-sub-line1">Unicorns are rare. They are magical. Their horn purifies water. When they show up —</span><span className="hero-sub-miracles">expect miracles.</span></p>
+              <p className="hero-sub"><span className="hero-sub-line1">Unicorns are rare. They are magical. Their horn purifies water.</span><span className="hero-sub-miracles">When they show up — expect miracles.</span></p>
             </div>
             <div className="hero-img-block">
               <img src="/unicorn-assets/hero.jpg" alt="Unicorn Alliance" />
